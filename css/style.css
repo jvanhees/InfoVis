@@ -13,13 +13,30 @@ a:hover{text-decoration: none;}
 
 h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	font-family:"Open Sans", sans-serif;
-  color: #333;
+  color: white;
 } 
+
+/* Background */
+.bg {
+  background: url('../assets/background.jpg') no-repeat center center;
+  position: fixed;
+  width: 100%;
+  height: 150px; /*same height as jumbotron */
+  top:0;
+  left:0;
+  z-index: -1;
+}
+
+.jumbotron {
+  height: 150px;
+  text-shadow: #444 0 1px 1px;
+  background:transparent;
+}
 
 /* NavBar */
 
 #nav-bloc {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .navbar{
@@ -39,6 +56,11 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .navbar-brand{
 	padding: 15px 15px;
 }
+
+a:focus,a:hover {
+text-decoration:underline;
+}
+
 .navbar .nav{
 	padding-top: 2px;
 	margin-right: -16px;
@@ -87,152 +109,6 @@ width: 100%;
   color: #333;
 }
 
-/* Carousel */
-
-.container {
-    margin-top: 20px;
-}
-
-/* Carousel Styles */
-.carousel-indicators .active {
-    background-color: #fff;
-}
-
-.carousel-inner img {
-    width: 100%;
-    max-height: 460px
-}
-
-.carousel-control {
-    width: 0;
-}
-
-.carousel-control.left,
-.carousel-control.right {
-  opacity: 1;
-  filter: alpha(opacity=100);
-  background-image: none;
-  background-repeat: no-repeat;
-  text-shadow: none;
-}
-
-.carousel-control.left span {
-  margin-left: 15px;
-}
-
-.carousel-control.right span {
-  margin-right: 15px;
-}
-
-.carousel-control .glyphicon-chevron-left, 
-.carousel-control .glyphicon-chevron-right, 
-.carousel-control .icon-prev, 
-.carousel-control .icon-next {
-  position: absolute;
-  top: 45%;
-  z-index: 5;
-  display: inline-block;
-}
-
-.carousel-control .glyphicon-chevron-left,
-.carousel-control .icon-prev {
-  left: 0;
-}
-
-.carousel-control .glyphicon-chevron-right,
-.carousel-control .icon-next {
-  right: 0;
-}
-
-.carousel-control.left span,
-.carousel-control.right span {
-
-}
-
-.carousel-control.left span:hover,
-.carousel-control.right span:hover {
-  opacity: .7;
-  filter: alpha(opacity=70);
-}
-
-/* Carousel Header Styles */
-.header-text {
-    position: absolute;
-    top: 30%;
-    left: 1.8%;
-    right: auto;
-    width: 96.66666666666666%;
-    color: #fff;
-}
-
-.header-text h2 {
-    font-size: 40px;
-    font-weight: bold;
-}
-
-.header-text h2 span {
-    padding: 10px;
-    color: #fff;
-}
-
-.btn-min-block {
-    min-width: 170px;
-    line-height: 26px;
-}
-
-.btn-theme {
-    color: #fff;
-    background-color: transparent;
-    border-color: #fff;
-    margin-right: 15px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    border-radius: 0px;
-}
-
-.btn-theme:hover {
-    color: #fff;
-    background-color: transparent;
-    border-color: #fff;
-}
-
-/* Posts */
-
-.post {
-  background-color: #FFF;
-  overflow: hidden;
-}
-.post .content {
-}
-
-.post .post-img-content img {
-  position: relative;
-}
-
-.post .post-date  {
-  background-color: rgba(51, 51, 51, 0.58);
-  position: absolute;
-  bottom: 0px;
-  width: 50%;
-  color: #FFF;
-  padding: 10px 15px;
-}
-.news .post-img-content {
-  width: 350px;
-  height: 180px;
-  position: relative;
-}
-
-.work .post-img-content {
-  width: 450px;
-  height: 230px;
-  position: relative;
-}
-.feed .post-img-content {
-  width: 260px;
-  height: 130px;
-  position: relative;
-}
 
 /* Mobile adjustments */
 
