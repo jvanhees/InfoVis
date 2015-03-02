@@ -3,8 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Information Visualization Project</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 </head>
@@ -41,11 +42,29 @@
 	</div>
 	<!-- Navigation Block end -->
 </div>
-
-
-
-
-
-
+<div class="content">
+    <div class="container">
+		<nav class="arrows">
+			<a class="arrow-left" onClick="previousSlide()">Previous</a>
+			<a class="arrow-right" onClick="nextSlide()">Next</a>
+		</nav>
+		<div class="slides">
+			<div class="slide active" id="slide-1">
+				<span class="quote">"Amsterdam is a thriving tech hub, with developing innovative tech companies. Here are cross-border collaborations between the digital, creative and marketing workforces."</span>
+				<span class="caption">That's a bold statement from Marketing Amsterdam... Let's see what the numbers actually say about this...</span>
+			</div>
+			<div class="slide next" id="slide-2">
+				Slide 2
+			</div>
+			<div class="slide next" id="slide-3">
+				Slide 3
+			</div>
+		</div>
+    </div>
+</div>
 </body>
+    
+<script type="text/javascript" src="js/d3.min.js"       ></script>
+<script type="text/javascript" src="js/main.js"         ></script>
+
 </html>

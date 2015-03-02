@@ -7,6 +7,10 @@ body{
   background:#FFF;
   -webkit-font-smoothing: antialiased;
 }
+
+body * {
+	box-sizing: border-box;
+}
 a:hover{text-decoration: none;}
 
 /* Globals type styling */
@@ -149,3 +153,64 @@ width: 100%;
     .a-block{
         text-align: center;
     }
+}
+
+.content {
+	position: absolute;
+	bottom: 0;
+	top: 210px;
+	left: 0;
+	right: 0;
+}
+
+.container {
+	position: absolute;
+	top:0; bottom: 0; left: 0; right: 0;
+	overflow: hidden;
+	background-color: #EEE;
+}
+
+.slides {
+	margin: 2%;
+	position: absolute;
+	top: 0; bottom: 0; left: 0; right: 0;
+}
+
+.slide {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 98%;
+	padding: 2%;
+	border: 1px solid #CCC;
+	border-radius: 3px;
+	background-color: #FFF;
+	transition: left 1s, right 1s;
+}
+
+.slide.active {
+	left: 1%;
+	right: 1%;
+}
+
+.slide.previous {
+	left: -99%;
+}
+.slide.next {
+	left: 101%;
+}
+
+.quote {
+	display: block;
+	font-size: 2em;
+	text-align: center;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.caption {
+	display: block;
+	font-size: 2em;
+	text-align: center;
+	font-weight: bold;
+}
