@@ -1,0 +1,215 @@
+function categories(){
+	return [
+			{
+				"key": "Amsterdam",
+				"values":[
+					{
+						"x": 1,
+						"y": 0.271153846153846
+					},
+					{
+						"x": 2,
+						"y": 0.635576923076923
+					},
+					{
+						"x": 3,
+						"y": 0.0807692307692308
+					},
+					{
+						"x": 4,
+						"y": 0.0125
+					}
+				]
+			},
+			{
+				"key": "Los Angeles",
+				"values":[
+					{
+						"x": 1,
+						"y": 0.370932754880694
+					},
+					{
+						"x": 2,
+						"y": 0.119987604586303
+					},
+					{
+						"x": 3,
+						"y": 0.0878215060427642
+					},
+					{
+						"x": 4,
+						"y": 0.0526495196777192
+					}
+				]
+			},
+			{
+				"key": "London",
+				"values":[
+					{
+						"x": 1,
+						"y": 0.503108704372242
+					},
+					{
+						"x": 2,
+						"y": 0.151875250701966
+					},
+					{
+						"x": 3,
+						"y": 0.0706979542719615
+					},
+					{
+						"x": 4,
+						"y": 0.049488567990373
+					}
+				]
+			}
+	]
+}
+				
+function categories2(){
+	return [
+			{		
+				"key":"Management, security & consultancy",
+				"values":[
+					{
+						"x": "Amsterdam",
+						"y": 0.271153846153846
+					},
+					{
+						"x": "Los Angeles",
+						"y": 0.370932754880694
+					},
+					{
+						"x": "London",
+						"y": 0.503108704372242
+					}
+				]
+			},
+			{
+				"key":"Development",
+				"values":[
+					{
+						"x": "Amsterdam",
+						"y": 0.635576923076923
+					},
+					{
+						"x": "Los Angeles",
+						"y": 0.119987604586303
+					},
+					{
+						"x": "London",
+						"y": 0.151875250701966
+					}
+				]
+			},
+			{
+				"key":"Hardware",
+				"values":[
+					{
+						"x": "Amsterdam",
+						"y": 0.0807692307692308
+					},
+					{
+						"x": "Los Angeles",
+						"y": 0.0878215060427642
+					},
+					{
+						"x": "London",
+						"y": 0.0706979542719615
+					}
+				]
+			},
+			{
+				"key":"Communication",
+				"values":[
+					{
+						"x": "Amsterdam",
+						"y": 0.0125
+					},
+					{
+						"x": "Los Angeles",
+						"y": 0.0526495196777192
+					},
+					{
+						"x": "London",
+						"y": 0.049488567990373
+					}
+				]
+			}
+	]
+};
+
+function categoriesAmsterdam() {
+  return  [
+		// {
+// 		"label":"Other",
+// 		"value":0
+// 		},
+		{
+		"label":"Management, security & consultancy",
+		"value":282
+		},
+		{
+		"label":"Development",
+		"value":661
+		},
+		{
+		"label":"Hardware",
+		"value":84
+		},
+		{
+		"label":"Communication",
+		"value":13
+		}
+	 ];
+};
+
+function categoriesLA() {
+  return  [
+		// {
+// 		"label":"Other",
+// 		"value":11895
+// 		},
+		{
+		"label":"Management, security & consultancy",
+		"value":11970
+		},
+		{
+		"label":"Development",
+		"value":3872
+		},
+		{
+		"label":"Hardware",
+		"value":2834
+		},
+		{
+		"label":"Communication",
+		"value":1699
+		}
+	];
+};
+
+function categoriesLondon() {
+	return  [
+		// {
+// 		"label":"Other",
+// 		"value":4484
+// 		},
+		{
+		"label":"Management, security & consultancy",
+		"value":10034
+		},
+		{
+		"label":"Development",
+		"value":3029
+		},
+		{
+		"label":"Hardware",
+		"value":1410
+		},
+		{
+		"label":"Communication",
+		"value":987
+		}
+	];
+};
