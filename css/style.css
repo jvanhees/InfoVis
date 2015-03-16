@@ -4,164 +4,9 @@ html,body {
 body{
 	margin:0;
 	padding:0;
-  background:#FFF;
-  -webkit-font-smoothing: antialiased;
 }
 
-body * {
-	box-sizing: border-box;
-}
 a:hover{text-decoration: none;}
-
-/* Globals type styling */
-
-h1,h2,h3,h4,h5,h6,p,label,.btn,a{
-	font-family:"Open Sans", sans-serif;
-  color: white;
-} 
-
-/* Background */
-.bg {
-  background: url('../assets/background.jpg') no-repeat center center;
-  position: fixed;
-  width: 100%;
-  height: 150px; /*same height as jumbotron */
-  top:0;
-  left:0;
-  z-index: -1;
-}
-
-.jumbotron {
-  height: 150px;
-  text-shadow: #444 0 1px 1px;
-  background:transparent;
-}
-
-/* NavBar */
-
-#nav-bloc {
-  margin-top: 20px;
-}
-
-.navbar{
-	margin-bottom: 0;
-}
-.navbar-brand{
-	font-size: 25px;
-	font-weight: bold;
-	font-family: "Open Sans", Helvetica, Arial, sans-serif;
-	font-weight: 600;
-}
-.navbar-brand img{
-	width: auto;
-	max-height: 40px;
-	margin: -12px 5px 0 0;
-}
-.navbar-brand{
-	padding: 15px 15px;
-}
-
-a:focus,a:hover {
-text-decoration:underline;
-}
-
-.navbar .nav{
-	padding-top: 2px;
-	margin-right: -16px;
-	float:right;
-}
-.nav > li{
-	float: left;
-	margin-top: 4px;
-	font-size: 16px;
-}
-.nav > li a:hover{
-	background:transparent;
-}
-.navbar-toggle{
-	margin: 12px;
-	border: 0px;
-}
-.navbar-toggle:hover{
-	background:transparent!important;
-}
-.navbar-toggle .icon-bar{
-	background-color: rgba(0,0,0,.5);
-	width: 26px;
-}
-.navbar-collapse.in {
-overflow-y: visible;
-float: left;
-width: 100%;
-}
-.navbar-1 {
-  float: right;
-}
-.site-navigation:first-child {
-  float: left;
-}
-.site-navigation:nth-child(2) {
-  float: right;
-}
-.site-navigation:nth-child(2) a {
-  color: #ccc;
-  font-size: 85%;
-  padding-right: 0px;
-}
-
-.site-navigation .nav > .active{
-  color: #333;
-}
-
-
-/* Mobile adjustments */
-
-@media (max-width: 768px)
-{
-    .bloc{
-        text-align: center;
-        -webkit-background-size: auto 200%;
-        -moz-background-size: auto 200%;
-        -o-background-size: auto 200%;
-        background-size: auto 200%;
-    }
-    .navbar .nav{
-        padding-top: 0;
-        border-top:1px solid rgba(0,0,0,.2);
-        float:none!important;
-    }
-    .nav > li{
-        margin-top: 0;
-        border-bottom:1px solid rgba(0,0,0,.1);
-        background:rgba(0,0,0,.05);
-        text-align: left;
-        width:100%;
-    }
-    .nav > li:hover{
-        background:rgba(0,0,0,.08);
-    }
-    .navbar-collapse{
-        -webkit-box-shadow: none;
-        box-shadow: none;
-    }
-    .btn.pull-left, .btn.pull-right{
-       float:none!important; 
-    }
-    .bloc-xl,.bloc-lg{
-        padding: 40px 0;
-    }
-    .a-block{
-        text-align: center;
-    }
-}
-
-.content {
-	position: absolute;
-	bottom: 0;
-	top: 210px;
-	left: 0;
-	right: 0;
-}
 
 .container {
 	position: absolute;
@@ -170,34 +15,45 @@ width: 100%;
 	background-color: #EEE;
 }
 
-.slides {
-	margin: 2%;
+.pages {
 	position: absolute;
-	top: 0; bottom: 0; left: 0; right: 0;
+	top: 80px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: hidden;
 }
 
-.slide {
+.pages .page {
+	transition: left 1s;
 	position: absolute;
 	top: 0;
-	bottom: 0;
-	width: 98%;
-	padding: 2%;
-	border: 1px solid #CCC;
-	border-radius: 3px;
-	background-color: #FFF;
-	transition: left 1s, right 1s;
+	width: 92%;
+	bottom: 72px;
+	margin: 0 4%;
 }
 
-.slide.active {
-	left: 1%;
-	right: 1%;
+.pages .page.active {
+	left: 0;
 }
 
-.slide.previous {
-	left: -99%;
+.pages .page.before {
+	left: -188%;
 }
-.slide.next {
-	left: 101%;
+.pages .before.first {
+	left: -94%;
+}
+.pages .page.after {
+	left: 188%;
+}
+.pages .after.first {
+	left: 94%;
+}
+
+.next-button {
+	position: absolute;
+	bottom: 44px;
+	right: 5%;
 }
 
 .quote {
@@ -213,4 +69,10 @@ width: 100%;
 	font-size: 2em;
 	text-align: center;
 	font-weight: bold;
+}
+
+.pager {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
 }

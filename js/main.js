@@ -15,23 +15,57 @@ var activeSlide = 1;
 var state = 0;
 
 function nextSlide(){
-	activeSlide++;
-	showSlide(activeSlide);
+	showSlide(activeSlide + 1);
 }
 
 function previousSlide(){
-	activeSlide--;
-	showSlide(activeSlide);
+	showSlide(activeSlide - 1);
 }
 
-function showSlide(slidenumber){
-	var $activeSlide = $('.slide#slide-'+slidenumber);
-	// Remove active from all
-	$('.slide').removeClass('active');
-	// Add active
-	$activeSlide.removeClass('previous next').addClass('active');
+function showSlide(slideNumber){
+	var $slide = $('.page#page-'+slideNumber);
+	if($slide.length > 0){
+		activeSlide = slideNumber;
 	
-	// Add next
-	$activeSlide.prevAll().addClass('previous');
-	$activeSlide.nextAll().addClass('next');
+		// Remove active from all
+		$('.page').removeClass('active before after first');
+		// Add active
+		$slide.removeClass('before after first').addClass('active');
+		
+		
+		
+		// Add next
+		$slide.prev().addClass('first');
+		$slide.prevAll().addClass('before');
+		$slide.next().addClass('first');
+		$slide.nextAll().addClass('after');
+	}
 }
+
+$.material.init();
+
+nv.addGraph(function() {
+  var chart = nv.models.lineChart()
+    .useInteractiveGuideline(true)
+    ;
+
+  chart.xAxis
+    .axisLabel('Year')
+    .tickFormat(d3.format('04d'))
+    ;
+
+  chart.yAxis
+    .axisLabel('Company percentage (%)')
+    .tickFormat(d3.format('.3%'))
+    ;
+
+  d3.select('#chart svg')
+    .datum(companiesPerYear())
+    .transition().duration(500)
+    .call(chart)
+    ;
+
+  nv.utils.windowResize(chart.update);
+
+  return chart;
+});
