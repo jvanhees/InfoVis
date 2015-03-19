@@ -1,5 +1,16 @@
 function companiesPerYear(){
 	return [
+
+		{
+			key: 'Events',
+			values: [
+				{
+					"x": 2000,
+					"y": 0,
+					"description": "alles kapot"
+				}
+			]
+		},
 		{
 			key: 'Amsterdam',
 			values: [
@@ -165,7 +176,8 @@ function companiesPerYear(){
 				},
 				{
 				"x":2000,
-				"y":0.00130566058265103
+				"y":0.00130566058265103,
+					"label": 'blaat'
 				},
 				{
 				"x":2001,
@@ -219,8 +231,7 @@ function companiesPerYear(){
 				"x":2013,
 				"y":0.00592987514620678
 				}
-			],
-			color: '#FF0000'
+			]
 		},
 		{
 			key: 'Los Angeles',
@@ -441,8 +452,7 @@ function companiesPerYear(){
 				"x":2013,
 				"y":0.00621411416997786
 				}
-			],
-			color: '#00FF00'
+			]
 		},
 		{
 			key: 'London',

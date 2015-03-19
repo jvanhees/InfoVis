@@ -28,6 +28,7 @@ foreach ($dir as $fileinfo) {
     <link rel="stylesheet" href="animate.css">
 	
 	<link rel="stylesheet" href="lib/nvd3/build/nv.d3.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="lib/c3/c3.min.css" rel="stylesheet">
 	
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	
@@ -41,9 +42,7 @@ foreach ($dir as $fileinfo) {
 	<script type="text/javascript" src="lib/d3/d3.min.js"></script>
 	<script type="text/javascript" src="lib/nvd3/build/nv.d3.min.js"></script>
 	
-
-	<script type="text/javascript" src="data/companies_per_year.json"></script>
-	<script type="text/javascript" src="data/categories.json"></script>
+	<script type="text/javascript" src="lib/c3/c3.min.js"></script>
 </head>
 
 <body>
@@ -75,15 +74,19 @@ foreach ($dir as $fileinfo) {
 		</div>
 	
 		<ul class="pager">
-			<li><a href="javascript:showSlide(1);">1</a></li>
-			<li><a href="javascript:showSlide(2);">2</a></li>
-			<li><a href="javascript:showSlide(3);">3</a></li>
+			<?php
+			$i = 0;
+			foreach($pages as $page){
+				$i++;
+				?>
+				<li><a href="javascript:showSlide(<?=$i?>);"><?=$i?></a></li>				
+				<?
+			}
+			?>
 		</ul>
 	</div>
 </body>
 
-<script type="text/javascript" src="js/main.js"         ></script>
-<script type="text/javascript" src="js/company-types.js"         ></script>
-<script type="text/javascript" src="js/company-year-chart.js"         ></script>
+<script type="text/javascript" src="js/main.js"></script>
 
 </html>

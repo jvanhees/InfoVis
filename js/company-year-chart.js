@@ -1,7 +1,16 @@
-
+console.log(colors.filter(function(element, index, array){
+	if(index % 3 == 2){
+		return true;
+	}
+}));
 nv.addGraph(function() {
   var chart = nv.models.lineChart()
     .useInteractiveGuideline(true)
+	.color(colors.filter(function(element, index, array){
+		if(index % 4 == 2){
+			return true;
+		}
+	}))
     ;
 
   chart.xAxis
