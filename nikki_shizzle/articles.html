@@ -1,0 +1,229 @@
+<html>
+
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animate.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <title>Newspaper Style Design Experiment</title>
+
+    <script>
+        $(document).ready(function() {
+            //var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+            var animationName = 'animated zoomOut';
+            $("#buttonNext").click(function() {
+                $('#container1').addClass(animationName);
+                $('#container2').addClass(animationName);
+                $('#container3').addClass(animationName);
+                $('#container4').addClass(animationName);
+                $('#container5').addClass(animationName);
+                $('#container6').addClass(animationName);
+                $('#container7').addClass(animationName);
+                $('#container8').addClass(animationName);
+                $('#statements').css('display', 'block');
+                $('#statements').addClass('animated zoomIn');
+            });
+
+            $("#buttonPrev").click(function() {
+                //do reverse
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <!--Amsterdam News Header-->
+
+    <div id="ams" class="animated zoomIn">
+
+        <h1>Amsterdam is a thriving tech hub, with developing innovative tech companies. There are cross-border collaborations between the digital, creative and marketing workforces. <br></h1>
+        <p>Let's see what the numbers say about this...</p>
+
+    </div>
+
+    <!--End Amsterdam News Header-->
+
+    <!--Article 1    -->
+
+    <div id="container1" class="animated fadeInLeft" onClick="window.open('http://www.hollandtrade.com/sector-information/high-tech-industries/ict/?bstnum=5391', '_blank', 'width=600, height=500')">
+        <header>
+            <ul>
+                <li>&copy; 2014 I Am Expat</li>
+                <li>Amsterdam, Wednesday, February 5, 2014</li>
+            </ul>
+        </header>
+        <section id="content">
+            <article>
+                <h2>Amsterdam rated 2nd-smartest city in Europe</h2>
+                <p><span>by <span>Alexandra Gowling</span></span>An American progressive business magazine Fast Company has ranked Amsterdam as Europe's second smartest city, based on its innovation infrastructure, technology and entrepreneurship. According to the author, our cities now "demand 21st-century solutions to accommodate their growing populations in ways that not only maintain the quality of life, but also improve it. In short, smart cities are innovative cities." European cities as the model for the rest of the world to learn from, the magazine also said, as they tend to be denser, with better public transport and a larger commitment to cycling and walking. They also show a stronger focus on sustainability and low-carbon solutions, as well as a culture and citizenry "more engaged in the journey towards more sustainable and smarter cities."
+                    <br />
+                </p>
+            </article>
+        </section>
+    </div>
+
+    <!--End Article 1    -->
+
+    <!--Article 2    -->
+
+    <div id="container2" class="animated fadeInDownBig" onClick="window.open('http://www.iqnomy.com/en/blog/categorie/agenciesdeveloperssite-owners/item/Dutch-Tech-Startups-Meet-Their-NYC-Counterparts-The-Wallstreet-Journal/', '_blank', 'width=600, height=500')">
+        <header>
+            <ul>
+                <li>&copy; IQNOMY</li>
+                <li>Amsterdam, Saturday, Juni 1, 2013</li>
+            </ul>
+        </header>
+        <section id="content">
+            <article>
+                <h2>Dutch Tech Startups Meet Their NYC Counterparts</h2>
+                <p><span>by <span>Rob Boeyink</span></span>The Dutch startups will experience first-hand the opportunities available in the NYC tech industry, and their New York-based counterparts have the opportunity to learn more about the tech startup community in the Netherlands. The Dutch Consulate hopes the event will drive collaboration between Dutch and NYC technology entrepreneurs.
+                    <br>
+                    <br> The highlight of the visit will be "Dutch Demo Night" on Thursday, June 6. There, Dutch startup entrepreneurs will present themselves to a group of prominent NYC tech experts, venture capitalists, and government leaders who all share the goal of growing the tech community in both the Netherlands and New York City. Dutch Demo Night is a joint effort of the Consulate General and WeWork Soho.</p>
+            </article>
+        </section>
+    </div>
+
+    <!--End Article 2    -->
+
+    <!--Article 3    -->
+
+    <div id="container3" class="animated fadeInUpBig" onClick="window.open('http://www.amsterdameconomicboard.com/nieuws/12708/amsterdam-wil-plek-in-top-3-europese-startupsteden', '_blank', 'width=600, height=500')">
+        <header>
+            <ul>
+                <li>&copy; amsterdam economic board</li>
+                <li>Amsterdam, January 16, 2015</li>
+            </ul>
+        </header>
+        <section id="content">
+            <article>
+                <h2>Amsterdam wil plek in top 3 Europese startup-steden</h2>
+                <p><span>by <span>Gemeente Amsterdam</span></span>Om de kansen voor snel groeiende startups sterk te verbeteren, komt de Gemeente Amsterdam in samenwerking met bedrijven en kennisinstellingen met het actieprogramma StartupAmsterdam. De stad investeert de komende jaren in het aantrekken van internationaal talent.
+                    <br>
+                    <br>
+                </p>
+            </article>
+        </section>
+    </div>
+
+    <!--End Article 3    -->
+
+    <!--Article 4    -->
+
+    <div id="container4" class="animated fadeInRightBig" onClick="window.open('http://www.amsterdameconomicboard.com/nieuws/12050/amsterdam-een-van-de-leidende-digitale-hoofdsteden-ter-wereld', '_blank', 'width=600, height=500')">
+        <header>
+            <ul>
+                <li>&copy; amsterdam economic board</li>
+                <li>Amsterdam, September 16, 2014</li>
+            </ul>
+        </header>
+        <section id="content">
+            <article>
+                <h2>Amsterdam &#233;&#233;n van de leidende digitale hoofdsteden ter wereld </h2>
+                <p><span>by <span>Gemeente Amsterdam</span></span>In een overzicht van tien succesvolle Europese steden in Wired UK komt Amsterdam goed uit de bus als &#233;&#233;n van de leidende digitale hoofdsteden ter wereld. Met haar strategische locatie, goede aansluiting bij andere markten en een grote pullfactor voor talent is de stad een perfect lanceerplatform voor startups.
+                    <br>
+                    <br>De Nederlandse tech start-ups illustreren het feit dat Amsterdam een inspirerende stad is dat barst van de talentvolle professionals die werkzaam zijn in de creatieve industrie en ICT-industrie.</p>
+            </article>
+        </section>
+    </div>
+
+    <!--End Article 4    -->
+
+    <!--Article 5    -->
+
+    <div id="container5" class="animated fadeInRight" onClick="window.open('http://www.ft.com/cms/s/0/ede7b130-a54e-11e4-ad35-00144feab7de.html#axzz3UYTpiUFc', '_blank', 'width=600, height=500')">
+        <header>
+            <ul>
+                <li>&copy; Financial Times</li>
+                <li>New York, January 27, 2015</li>
+            </ul>
+        </header>
+        <section id="content">
+            <article>
+                <h2>Amsterdam: a modern-day refuge for the start-up crowd</h2>
+                <p><span>by <span>Sally Davies</span></span>A haven for troublemakers, philosophers and dreamers since the 16th century, the Netherlands is now styling itself as a contemporary refuge for the start-up crowd. The national virtues of tolerance and versatility reach their peak in Amsterdam, where founders are welcomed with comfortably low tax rates and are in easy cycling distance of collaborators, incubators and investors.</p>
+            </article>
+        </section>
+    </div>
+
+    <!--End Article 5    -->
+
+
+    <!--Article 6    -->
+
+    <div id="container6" class="animated fadeInUpBig" onClick="window.open('http://uk.businessinsider.com/dutch-startup-wetransfer-raised-25-million-to-expand-into-us-2015-2?r=US', '_blank', 'width=600, height=500')">
+        <header>
+            <ul>
+                <li>&copy; Business Insider UK</li>
+                <li>New York, February 17, 2015</li>
+            </ul>
+        </header>
+        <section id="content">
+            <article>
+                <h2>Dutch startup WeTransfer just raised $25 million to expand into the US </h2>
+                <p><span>by <span>Joshua Barrie</span></span>Dutch startup WeTransfer has raised $25 million in new funding to expand into the "US, Europe, and beyond." It announced the news in a press release on Tuesday. The Amsterdam-based company operates a cloud-based service that allows users to send large files just as securely and easily as email attachments.</p>
+            </article>
+        </section>
+    </div>
+
+    <!--End Article 6    -->
+
+    <!--Article 7   -->
+
+    <div id="container7" class="animated fadeInDownBig" onClick="window.open('http://www.parool.nl/parool/nl/4/AMSTERDAM/article/detail/3798704/2014/11/26/ICT-sector-nieuwe-stuwende-kracht-van-Amsterdamse-economie.dhtml', '_blank', 'width=600, height=500')">
+        <header>
+            <ul>
+                <li>&copy; Het Parool</li>
+                <li>New York, November 26, 2014</li>
+            </ul>
+        </header>
+        <section id="content">
+            <article>
+                <h2>ICT-sector nieuwe stuwende kracht van Amsterdamse economie</h2>
+                <p><span>by <span>Het Parool</span></span>De ict-sector ontwikkelt zich zo voortvarend, dat die een nieuwe stuwende kracht voor de Amsterdamse economie is geworden. Nieuwe bronnen van groei compenseren zelfs het wegvallen van de financiële sector als kartrekker van de regio. Dat schrijft ING in haar jaarlijkse visie over de ontwikkeling van de economie in Groot-Amsterdam. Voor volgend jaar verwacht de bank voor het eerst sinds 2010 weer meer dan 2 procent groei voor deze regio. 'De economie van de Amsterdamse regio krijgt weer schwung', schrijft de bank.</p>
+            </article>
+        </section>
+    </div>
+
+    <!--End Article 7    -->
+
+    <!--Article 8   -->
+
+    <div id="container8" class="animated fadeInUpBig" onClick="window.open('http://www.parool.nl/parool/nl/4/AMSTERDAM/article/detail/3798704/2014/11/26/ICT-sector-nieuwe-stuwende-kracht-van-Amsterdamse-economie.dhtml', '_blank', 'width=600, height=500')">
+        <header>
+            <ul>
+                <li>&copy; Het Parool</li>
+                <li>New York, November 26, 2014</li>
+            </ul>
+        </header>
+        <section id="content">
+            <article>
+                <h2>Amsterdamse ICT-bedrijven groeien hard ondanks schaarste aan goed personeel</h2>
+                <p><span>by <span>Het Parool</span></span>De ict-sector ontwikkelt zich zo voortvarend, dat die een nieuwe stuwende kracht voor de Amsterdamse economie is geworden. Nieuwe bronnen van groei compenseren zelfs het wegvallen van de financiële sector als kartrekker van de regio. Dat schrijft ING in haar jaarlijkse visie over de ontwikkeling van de economie in Groot-Amsterdam. Voor volgend jaar verwacht de bank voor het eerst sinds 2010 weer meer dan 2 procent groei voor deze regio. 'De economie van de Amsterdamse regio krijgt weer schwung', schrijft de bank.</p>
+            </article>
+        </section>
+    </div>
+
+    <!--End Article 8    -->
+
+    <!--    ---------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+    <!--    Statements  -->
+
+    <div id="statements" class="">
+        <h1>Amsterdam...</h1>
+        <ol type="1">
+            <li class="animated flipInX">is a thriving tech hub with developing <span style="color:#ffcc00; text-decoration:underline;">innovative</span> tech companies</li>
+            <li class="animated flipInX">has cross-border collaborations between the <span style="color:#ffcc00; text-decoration:underline;">digital</span>, creative and marketing workforces</li>
+            <li class="animated flipInX">is <span style="color:#ffcc00;text-decoration:underline">THE</span> place to start a business in the ICT industry</li>
+            <li class="animated flipInX"> has potentially <span style="color:#ffcc00;text-decoration:underline">higher</span> chances of finding a tech-related job</li>
+        </ol>
+    </div>
+
+    <button type="button" id="buttonNext">Next btn</button>
+    <button type="button" id="buttonPrev">Prev btn</button>
+
+</body>
+
+</html>
