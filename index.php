@@ -1,3 +1,19 @@
+<?php
+ini_set('display_errors',1);
+ini_set('display_startup_errors',1);
+error_reporting(-1);
+
+$pages = array();
+
+$dir = new DirectoryIterator('pages');
+foreach ($dir as $fileinfo) {
+    if (!$fileinfo->isDot()) {
+		if($fileinfo->getExtension() == 'html'){
+			$pages[] = file_get_contents($fileinfo->getPath().'/'.$fileinfo->getFilename());
+		}
+    }
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +24,8 @@
     <link href="lib/bootstrap-material-design/dist/css/roboto.min.css" rel="stylesheet">
     <link href="lib/bootstrap-material-design/dist/css/material.min.css" rel="stylesheet">
     <link href="lib/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet">
+	
+    <link rel="stylesheet" href="animate.css">
 	
 	<link rel="stylesheet" href="lib/nvd3/build/nv.d3.min.css" rel="stylesheet">
 	
@@ -40,40 +58,28 @@
 		</ul>
 	</div>
 	
+	<div class="container">
+		<div class="pages">
+		
+			<?php
+			$i = 0;
+			foreach($pages as $page){
+				$i++;
+				echo $page;
+			}
+			?>
+		
+			<div id="next-button">
+				<button onclick="nextSlide();" class="btn btn-fab btn-raised btn-material-blue next-button"><i class="mdi-navigation-arrow-forward"></i></button>
+			</div>
+		</div>
 	
-	<div class="pages">
-		<div class="well page active" id="page-1">
-			<span class="quote">"Amsterdam is a thriving tech hub, with developing innovative tech companies. Here are cross-border collaborations between the digital, creative and marketing workforces."</span>
-			<span class="caption">That's a bold statement from Marketing Amsterdam... Let's see what the numbers actually say about this...</span>
-		</div>
-		<div class="well page after first" id="page-2">
-			<div style="height: 100%" id="company-year-chart">
-			  <svg></svg>
-			</div>
-		</div>
-		<div class="well page after" id="page-3">
-			<div style="height: 100%" class="col-md-4 categories">
-				<h3>Amsterdam</h3>
-			  <svg data="categoriesAmsterdam"></svg>
-			</div>
-			<div style="height: 100%" class="col-md-4 categories">
-				<h3>London</h3>
-			  <svg data="categoriesLondon"></svg>
-			</div>
-			<div style="height: 100%" class="col-md-4 categories">
-				<h3>Los Angeles</h3>
-			  <svg data="categoriesLA"></svg>
-			</div>
-		</div>
+		<ul class="pager">
+			<li><a href="javascript:showSlide(1);">1</a></li>
+			<li><a href="javascript:showSlide(2);">2</a></li>
+			<li><a href="javascript:showSlide(3);">3</a></li>
+		</ul>
 	</div>
-	
-	<button onclick="nextSlide();" class="btn btn-fab btn-raised btn-material-blue next-button"><i class="mdi-navigation-arrow-forward"></i></button>
-	
-	<ul class="pager">
-		<li><a href="javascript:showSlide(1);">1</a></li>
-		<li><a href="javascript:showSlide(2);">2</a></li>
-		<li><a href="javascript:showSlide(3);">3</a></li>
-	</ul>
 </body>
 
 <script type="text/javascript" src="js/main.js"         ></script>

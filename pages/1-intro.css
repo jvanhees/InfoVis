@@ -1,13 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Old+Standard+TT:400,700);
 @import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic|Oswald:400,700,300);
-* { box-sizing: border-box; }
-body {
-  font-family: Georgia, serif;
-  background-image: url("img/background_1.jpg");
-  background-size: 100%;
-  background-position: fixed;
-  background-repeat: no-repeat;
-}
 
 #ams {
     display: none;
@@ -43,8 +35,6 @@ body {
 #container1 {
   float: left;
   width: 280px;
-  margin-top: 50px;
-  margin-left: 202px;
   padding: 0 1em;
   background: #fff url(http://subtlepatterns.com/patterns/lightpaperfibers.png);
   border: 1px solid black;

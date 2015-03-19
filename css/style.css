@@ -4,15 +4,19 @@ html,body {
 body{
 	margin:0;
 	padding:0;
+	overflow: hidden;
 }
 
 a:hover{text-decoration: none;}
 
 .container {
-	position: absolute;
-	top:0; bottom: 0; left: 0; right: 0;
-	overflow: hidden;
-	background-color: #EEE;
+    background-image: url('../assets/background.jpg');
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-top: -20px;
+    background-size: cover;
 }
 
 .pages {
@@ -21,39 +25,49 @@ a:hover{text-decoration: none;}
 	bottom: 0;
 	left: 0;
 	right: 0;
-	overflow: hidden;
+	width: 100vw; 
+    height: 66.66vw; 
+	max-height: 100vh;
+	max-width: 150vh;
+	overflow: sibile;
+	margin: 0 auto;
 }
 
 .pages .page {
 	transition: left 1s;
 	position: absolute;
 	top: 0;
-	width: 92%;
-	bottom: 72px;
-	margin: 0 4%;
+	bottom: 130px;
+	width: 94%;
+}
+.pages .page .content {
 }
 
 .pages .page.active {
-	left: 0;
+	left: 3%;
 }
 
 .pages .page.before {
-	left: -188%;
+	left: -200%;
 }
 .pages .before.first {
-	left: -94%;
+	left: -100%%;
 }
 .pages .page.after {
-	left: 188%;
+	left: 210%;
 }
 .pages .after.first {
-	left: 94%;
+	left: 105%;
 }
 
-.next-button {
-	position: absolute;
-	bottom: 44px;
-	right: 5%;
+#next-button {
+    position: absolute;
+    bottom: 122px;
+    right: 5%;
+	transition: bottom .5s;
+}
+#next-button.quick-hide {
+    bottom: -60px;
 }
 
 .quote {
