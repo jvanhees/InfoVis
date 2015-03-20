@@ -31,6 +31,7 @@ foreach ($dir as $fileinfo) {
 	<link rel="stylesheet" href="lib/c3/c3.min.css" rel="stylesheet">
 	
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="css/chart.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	
 	
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
