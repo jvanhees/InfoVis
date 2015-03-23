@@ -3,7 +3,7 @@
 @import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic|Oswald:400,700,300);
 */
 
-#ams {
+#page-1 #ams {
     display: none;
     position: absolute;
     width: 600px;
@@ -18,14 +18,14 @@
     -webkit-animation-duration: 0.8s;
 }
 
-#ams h1 {
+#page-1 #ams h1 {
     font-family: 'Oswald', serif;
     font-weight: 400;
     font-size: 1.8em;
     margin: 35px 42px;
 }
 
-#ams p {
+#page-1 #ams p {
     font-family: 'Oswald', serif;
     font-weight: 300;
     font-size: 1.8em;
@@ -34,7 +34,7 @@
     color: #009587;
 }
 
-#container1 {
+#page-1 #container1 {
   position: absolute;
   width: 30%;
   left: 3%;
@@ -45,12 +45,12 @@
   cursor: pointer;
 }
 
-#container1:hover {
+#page-1 #container1:hover {
     box-shadow: 10px 10px 5px #888888;
     border: 3px solid #ffdb3e;
 }
 
-#container2 {
+#page-1 #container2 {
 position: absolute;
   width: 33%;
   left: 33%;
@@ -64,12 +64,12 @@ position: absolute;
   -webkit-animation-delay: 0.4s;
 }
 
-#container2:hover {
+#page-1 #container2:hover {
     box-shadow: 10px 10px 5px #888888;
     border: 3px solid #ffdb3e;
 }
 
-#container3 {
+#page-1 #container3 {
   position: absolute;
   left: 54%;
   top: 16%;
@@ -84,12 +84,12 @@ position: absolute;
   -webkit-animation-delay: 0.7s;
 }
 
-#container3:hover {
+#page-1 #container3:hover {
     box-shadow: 10px 10px 5px #888888;
     border: 3px solid #ffdb3e;
 }
 
-#container4 {
+#page-1 #container4 {
   position: absolute;
   left: 2%;
   width: 33%;
@@ -104,12 +104,12 @@ position: absolute;
   -webkit-animation-delay: 0.2s;
 }
 
-#container4:hover {
+#page-1 #container4:hover {
     box-shadow: 10px 10px 5px #888888;
     border: 3px solid #ffdb3e;
 }
 
-#container5 {
+#page-1 #container5 {
   position: absolute;
   left: 35%;
   top: 37%;
@@ -125,12 +125,12 @@ position: absolute;
 }
 
 
-#container5:hover {
+#page-1 #container5:hover {
     box-shadow: 10px 10px 5px #888888;
     border: 3px solid #ffdb3e;
 }
 
-#container6 {
+#page-1 #container6 {
   position: absolute;
   left: 59%;
   top: 42%;
@@ -145,12 +145,12 @@ position: absolute;
   -webkit-animation-delay: 1s;
 }
 
-#container6:hover {
+#page-1 #container6:hover {
     box-shadow: 10px 10px 5px #888888;
     border: 3px solid #ffdb3e;
 }
 
-#container7 {
+#page-1 #container7 {
   position: absolute;
   width: 57%;
   top: 70%;
@@ -165,12 +165,12 @@ position: absolute;
   -webkit-animation-delay: 1.1s;
 }
 
-#container7:hover {
+#page-1 #container7:hover {
     box-shadow: 10px 10px 5px #888888;
     border: 3px solid #ffdb3e;
 }
 
-#container8 {
+#page-1 #container8 {
   position: absolute;
   width: 45%;
   top: 73%;
@@ -185,21 +185,21 @@ position: absolute;
   -webkit-animation-delay: 1.2s;
 }
 
-#container8:hover {
+#page-1 #container8:hover {
     box-shadow: 10px 10px 5px #888888;
     border: 3px solid #ffdb3e;
 }
 
-h1, h2 {
+#page-1 h1, #page-1 h2 {
   font-family: 'Old Standard TT', serif;
 }
-h1 {
+#page-1 h1 {
   font-size: 2em;
   font-weight: 700;
   text-align: center;
   margin: 0;
 }
-h2 {
+#page-1 h2 {
   font-size: 1.5vw;
   font-style: italic;
   text-align: center;
@@ -208,13 +208,13 @@ h2 {
     font-size: 0.5em;
 }
 
-#buttonNext {
+#page-1 #buttonNext {
   position: fixed;
   top: 85%;
   right: 6%;
 }
 
-#buttonPrev {
+#page-1 #buttonPrev {
   position: fixed;
   top: 85%;
   right: 92%;
@@ -232,7 +232,7 @@ h2 {
 
 }
 
-#statements li {
+#page-1 #statements li {
     font-size: 1.6em;
     margin: 25px 0px;
 }
