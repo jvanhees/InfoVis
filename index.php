@@ -3,6 +3,11 @@ ini_set('display_errors',1);
 ini_set('display_startup_errors',1);
 error_reporting(-1);
 
+$startpage = 1;
+if(isset($_GET['p']) && $_GET['p']){
+	$startpage = $_GET['p'];
+}
+
 $pages = array();
 
 $dir = new DirectoryIterator('pages');
@@ -66,7 +71,26 @@ foreach ($dir as $fileinfo) {
 			$i = 0;
 			foreach($pages as $page){
 				$i++;
-				echo $page;
+				$classes = [];
+				if($i == $startpage){
+					$classes[] = 'active';
+				} elseif($i == $startpage + 1 || $i == $startpage - 1){
+					$classes[] = 'first';
+				}
+				if($i < $startpage){
+					$classes[] = 'before';
+				} elseif ($i > $startpage){
+					$classes[] = 'after';
+				}
+				if($i != 1){
+					$classes[] = 'well';
+				}
+				?>
+				
+				<div class="page <?=implode(' ', $classes)?>" id="page-<?=$i?>">
+				<?=$page?>
+				</div>
+				<?php
 			}
 			?>
 		
