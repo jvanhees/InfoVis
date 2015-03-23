@@ -1,70 +1,41 @@
-catAms = [
-	["Management, security & consultancy", 282],
-	["Development", 661],
-	["Hardware", 84],
-	["Communication", 13]
-];
-catLA = [
-	["Management, security & consultancy", 11970],
-	["Development", 3872],
-	["Hardware", 2834],
-	["Communication", 1699]
-];
-catLondon = [
-	["Management, security & consultancy", 10034],
-	["Development", 3029],
-	["Hardware", 1410],
-	["Communication", 987]
-];
+// //Regular pie chart example
+// nv.addGraph(function() {
+//	var chart = nv.models.pieChart()
+//		 .x(function(d) { return d.label })
+//		 .y(function(d) { return d.value })
+//		 .showLabels(true);
+//
+//	  d3.select("#company-types svg")
+//			.datum(categoriesAmsterdam())
+//			.transition().duration(350)
+//			.call(chart);
+//
+//	return chart;
+// });
 
-$('#page-5 .category').each(function(){
-	this.chart = c3.generate({
-		bindto: '#' + $(this).attr('id'),
-	    data: {
-	        columns: eval($(this).data('ref')),
-	        type : 'pie',
-			order: null,
-			colors: {
-				'Management, security & consultancy': colors[3],
-				'Development': colors[5],
-				'Hardware': colors[9],
-				'Communication': colors[13]
+nv.addGraph(function() {
+  var chart = nv.models.pieChart()
+		.x(function(d) { return d.label })
+		.y(function(d) { return d.value })
+		.showLegend(true)
+		.showLabels(true)	  //Display pie labels
+		.labelThreshold(.05)  //Configure the minimum slice size for labels to show up
+		.labelType("percent") //Configure what type of data to show in the label. Can be "key", "value" or "percent"
+		.donut(false)			 //Turn on Donut mode. Makes pie chart look tasty!
+		.donutRatio(0.35)	  //Configure how big you want the donut hole size to be.
+		.color(colors.filter(function(element, index, array){
+			if(index % 4 == 3){
+				return true;
 			}
-	    },
-		legend: {
-			show: false
-		},
-		tooltip: {
-			show: false
-		}
-	});
+		}))
+		;
+
+	  d3.selectAll(".categories svg").each(function(){
+		  var element = d3.select(this);
+			 element.datum(eval(element.attr('data')))
+		  .transition().duration(350)
+		  .call(chart);
+		  nv.utils.windowResize(chart.update);
+	  });
+		return chart;
 });
-//
-//
-// var categoriesLA = c3.generate({
-// 	bindto: '#categories-la',
-//     data: {
-//         // iris data from R
-//         columns: ,
-//         type : 'pie',
-// 		order: null
-//     },
-// 	legend: {
-// 		show: false
-// 	}
-// });
-//
-// var categoriesLondon = c3.generate({
-// 	bindto: '#categories-london',
-//     data: {
-//         // iris data from R
-//         columns: ,
-//         type : 'pie',
-// 		order: null
-//     },
-// 	legend: {
-// 		show: false
-// 	}
-// });
-//
-// console.log(categoriesAmsterdam);

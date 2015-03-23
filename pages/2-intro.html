@@ -1,44 +1,34 @@
 <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="pages/1-intro.css">
+<link rel="stylesheet" href="pages/2-intro.css">
+
 
 <script>
-    $(document).ready(function() {
-        //var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-        var animationName = 'animated zoomOut';
-        $("#buttonNext").click(function() {
-            $('#container1').addClass(animationName);
-            $('#container2').addClass(animationName);
-            $('#container3').addClass(animationName);
-            $('#container4').addClass(animationName);
-            $('#container5').addClass(animationName);
-            $('#container6').addClass(animationName);
-            $('#container7').addClass(animationName);
-            $('#container8').addClass(animationName);
-            $('#statements').css('display', 'block');
-            $('#statements').addClass('animated zoomIn');
-        });
-
-        $("#buttonPrev").click(function() {
-            //do reverse
-        });
+    $(document).on('update', function(data) {
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        if (data.activeSlide == 2){
+            $('.article').css('display','block');
+            $('#container1').addClass('animated fadeInLeft');
+            $('#container2').addClass('animated fadeInDownBig');
+            $('#container3').addClass('animated fadeInUpBig');
+            $('#container4').addClass('animated fadeInRightBig');
+            $('#container5').addClass('animated fadeInRight');
+            $('#container6').addClass('animated fadeInUpBig');
+            $('#container7').addClass('animated fadeInDownBig');
+            $('#container8').addClass('animated fadeInUpBig');
+        }
     });
 </script>
 
-
 <!--Amsterdam News Header-->
 
-<div id="ams" class="animated zoomIn article">
-
-    <h1>Amsterdam is a thriving tech hub, with developing innovative tech companies. There are cross-border collaborations between the digital, creative and marketing workforces. <br></h1>
-    <p>Let's see what the numbers say about this...</p>
-
+<div id="ams" class="article">
 </div>
 
 <!--End Amsterdam News Header-->
 
 <!--Article 1    -->
 
-<div id="container1" class="animated fadeInLeft article" onClick="window.open('http://www.hollandtrade.com/sector-information/high-tech-industries/ict/?bstnum=5391', '_blank', 'width=600, height=500')">
+<div id="container1" class="article" onClick="window.open('http://www.hollandtrade.com/sector-information/high-tech-industries/ict/?bstnum=5391', '_blank', 'width=600, height=500')">
     <header>
         <ul>
             <li>&copy; 2014 I Am Expat</li>
@@ -59,7 +49,7 @@
 
 <!--Article 2    -->
 
-<div id="container2" class="animated fadeInDownBig article" onClick="window.open('http://www.iqnomy.com/en/blog/categorie/agenciesdeveloperssite-owners/item/Dutch-Tech-Startups-Meet-Their-NYC-Counterparts-The-Wallstreet-Journal/', '_blank', 'width=600, height=500')">
+<div id="container2" class="article" onClick="window.open('http://www.iqnomy.com/en/blog/categorie/agenciesdeveloperssite-owners/item/Dutch-Tech-Startups-Meet-Their-NYC-Counterparts-The-Wallstreet-Journal/', '_blank', 'width=600, height=500')">
     <header>
         <ul>
             <li>&copy; IQNOMY</li>
@@ -80,7 +70,7 @@
 
 <!--Article 3    -->
 
-<div id="container3" class="animated fadeInUpBig article" onClick="window.open('http://www.amsterdameconomicboard.com/nieuws/12708/amsterdam-wil-plek-in-top-3-europese-startupsteden', '_blank', 'width=600, height=500')">
+<div id="container3" class="article" onClick="window.open('http://www.amsterdameconomicboard.com/nieuws/12708/amsterdam-wil-plek-in-top-3-europese-startupsteden', '_blank', 'width=600, height=500')">
     <header>
         <ul>
             <li>&copy; amsterdam economic board</li>
@@ -102,7 +92,7 @@
 
 <!--Article 4    -->
 
-<div id="container4" class="animated fadeInRightBig article" onClick="window.open('http://www.amsterdameconomicboard.com/nieuws/12050/amsterdam-een-van-de-leidende-digitale-hoofdsteden-ter-wereld', '_blank', 'width=600, height=500')">
+<div id="container4" class="article" onClick="window.open('http://www.amsterdameconomicboard.com/nieuws/12050/amsterdam-een-van-de-leidende-digitale-hoofdsteden-ter-wereld', '_blank', 'width=600, height=500')">
     <header>
         <ul>
             <li>&copy; amsterdam economic board</li>
@@ -123,7 +113,7 @@
 
 <!--Article 5    -->
 
-<div id="container5" class="animated fadeInRight article" onClick="window.open('http://www.ft.com/cms/s/0/ede7b130-a54e-11e4-ad35-00144feab7de.html#axzz3UYTpiUFc', '_blank', 'width=600, height=500')">
+<div id="container5" class="article" onClick="window.open('http://www.ft.com/cms/s/0/ede7b130-a54e-11e4-ad35-00144feab7de.html#axzz3UYTpiUFc', '_blank', 'width=600, height=500')">
     <header>
         <ul>
             <li>&copy; Financial Times</li>
@@ -143,7 +133,7 @@
 
 <!--Article 6    -->
 
-<div id="container6" class="animated fadeInUpBig article" onClick="window.open('http://uk.businessinsider.com/dutch-startup-wetransfer-raised-25-million-to-expand-into-us-2015-2?r=US', '_blank', 'width=600, height=500')">
+<div id="container6" class="article" onClick="window.open('http://uk.businessinsider.com/dutch-startup-wetransfer-raised-25-million-to-expand-into-us-2015-2?r=US', '_blank', 'width=600, height=500')">
     <header>
         <ul>
             <li>&copy; Business Insider UK</li>
@@ -162,7 +152,7 @@
 
 <!--Article 7   -->
 
-<div id="container7" class="animated fadeInDownBig article" onClick="window.open('http://www.parool.nl/parool/nl/4/AMSTERDAM/article/detail/3798704/2014/11/26/ICT-sector-nieuwe-stuwende-kracht-van-Amsterdamse-economie.dhtml', '_blank', 'width=600, height=500')">
+<div id="container7" class="article" onClick="window.open('http://www.parool.nl/parool/nl/4/AMSTERDAM/article/detail/3798704/2014/11/26/ICT-sector-nieuwe-stuwende-kracht-van-Amsterdamse-economie.dhtml', '_blank', 'width=600, height=500')">
     <header>
         <ul>
             <li>&copy; Het Parool</li>
@@ -181,7 +171,7 @@
 
 <!--Article 8   -->
 
-<div id="container8" class="animated fadeInUpBig article" onClick="window.open('http://www.parool.nl/parool/nl/4/AMSTERDAM/article/detail/3798704/2014/11/26/ICT-sector-nieuwe-stuwende-kracht-van-Amsterdamse-economie.dhtml', '_blank', 'width=600, height=500')">
+<div id="container8" class="article" onClick="window.open('http://www.parool.nl/parool/nl/4/AMSTERDAM/article/detail/3798704/2014/11/26/ICT-sector-nieuwe-stuwende-kracht-van-Amsterdamse-economie.dhtml', '_blank', 'width=600, height=500')">
     <header>
         <ul>
             <li>&copy; Het Parool</li>

@@ -1,24 +1,8 @@
-var colors = [
-	'#F44336',
-	'#E91E63',
-	'#9C27B0',
-	'#673AB7',
-	'#3F51B5',
-	'#2196F3',
-	'#03A9F4',
-	'#00BCD4',
-	'#009688',
-	'#4CAF50',
-	'#8BC34A',
-	'#CDDC39',
-	'#FFEB3B',
-	'#FFC107',
-	'#FF9800',
-	'#FF5722',
-	'#795548',
-	'#9E9E9E',
-	'#607D8B'
-];
+//d3.csv('data/data_small.csv', function(error, data){
+//    if (error) return console.error(error);
+//    console.log(data); 
+//});
+var colors = ['#F44336', '#E91E63', '#9C27B0', '#673AB7', '#3F51B5', '#2196F3', '#03A9F4', '#00BCD4', '#009688', '#4CAF50', '#8BC34A', '#CDDC39', '#FFEB3B', '#FFC107', '#FF9800', '#FF5722', '#795548', '#9E9E9E', '#607D8B'];
 
 var width = '100%',
     height = '100%';
@@ -79,18 +63,12 @@ function showSlide(slideNumber){
 		// $('#next-button').addClass('quick-hide');
 		setTimeout(function(){
 			broadcast();
-		}, 1000);
+		}, 500);
 		
 	}
 }
 
 function broadcast(){
-	if(activeState == totalStates){
-		// Last state..
-		$('.next-button i').removeClass('mdi-navigation-chevron-right').addClass('mdi-navigation-arrow-forward')
-	} else {
-		$('.next-button i').removeClass('mdi-navigation-arrow-forward').addClass('mdi-navigation-chevron-right')
-	}
 	$(document).trigger({
 		type: 'update',
 		activeSlide: activeSlide,
