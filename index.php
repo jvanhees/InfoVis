@@ -50,6 +50,9 @@ foreach ($dir as $fileinfo) {
 	<script type="text/javascript" src="lib/nvd3/build/nv.d3.min.js"></script>
 	
 	<script type="text/javascript" src="lib/c3/c3.min.js"></script>
+	
+
+	<script type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body>
@@ -112,7 +115,5 @@ foreach ($dir as $fileinfo) {
 		</ul>
 	</div>
 </body>
-
-<script type="text/javascript" src="js/main.js"></script>
 
 </html>
