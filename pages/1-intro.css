@@ -34,6 +34,13 @@
     color: #009587;
 }
 
+
+#page-1 .article:hover {
+    box-shadow: 10px 10px 5px #888888;
+    outline: 3px solid #ffdb3e;
+	z-index: 5;
+}
+
 #page-1 #container1 {
   position: absolute;
   width: 30%;
@@ -43,11 +50,6 @@
   background: #fff url(http://subtlepatterns.com/patterns/lightpaperfibers.png);
   border: 1px solid black;
   cursor: pointer;
-}
-
-#page-1 #container1:hover {
-    box-shadow: 10px 10px 5px #888888;
-    border: 3px solid #ffdb3e;
 }
 
 #page-1 #container2 {
@@ -62,11 +64,6 @@ position: absolute;
   border: 1px solid black;
   cursor: pointer;
   -webkit-animation-delay: 0.4s;
-}
-
-#page-1 #container2:hover {
-    box-shadow: 10px 10px 5px #888888;
-    border: 3px solid #ffdb3e;
 }
 
 #page-1 #container3 {
@@ -84,11 +81,6 @@ position: absolute;
   -webkit-animation-delay: 0.7s;
 }
 
-#page-1 #container3:hover {
-    box-shadow: 10px 10px 5px #888888;
-    border: 3px solid #ffdb3e;
-}
-
 #page-1 #container4 {
   position: absolute;
   left: 2%;
@@ -102,11 +94,6 @@ position: absolute;
   border: 1px solid black;
   cursor: pointer;
   -webkit-animation-delay: 0.2s;
-}
-
-#page-1 #container4:hover {
-    box-shadow: 10px 10px 5px #888888;
-    border: 3px solid #ffdb3e;
 }
 
 #page-1 #container5 {
@@ -124,12 +111,6 @@ position: absolute;
   -webkit-animation-delay: 0.9s;
 }
 
-
-#page-1 #container5:hover {
-    box-shadow: 10px 10px 5px #888888;
-    border: 3px solid #ffdb3e;
-}
-
 #page-1 #container6 {
   position: absolute;
   left: 59%;
@@ -143,11 +124,6 @@ position: absolute;
   border: 1px solid black;
   cursor: pointer;
   -webkit-animation-delay: 1s;
-}
-
-#page-1 #container6:hover {
-    box-shadow: 10px 10px 5px #888888;
-    border: 3px solid #ffdb3e;
 }
 
 #page-1 #container7 {
@@ -165,11 +141,6 @@ position: absolute;
   -webkit-animation-delay: 1.1s;
 }
 
-#page-1 #container7:hover {
-    box-shadow: 10px 10px 5px #888888;
-    border: 3px solid #ffdb3e;
-}
-
 #page-1 #container8 {
   position: absolute;
   width: 45%;
@@ -183,11 +154,6 @@ position: absolute;
   border: 1px solid black;
   cursor: pointer;
   -webkit-animation-delay: 1.2s;
-}
-
-#page-1 #container8:hover {
-    box-shadow: 10px 10px 5px #888888;
-    border: 3px solid #ffdb3e;
 }
 
 #page-1 h1, #page-1 h2 {
