@@ -32,7 +32,6 @@ foreach ($dir as $fileinfo) {
 	
     <link rel="stylesheet" href="css/animate.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	
-	<link rel="stylesheet" href="lib/nvd3/build/nv.d3.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="lib/c3/c3.min.css" rel="stylesheet">
 	
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
@@ -47,7 +46,6 @@ foreach ($dir as $fileinfo) {
     <script type="text/javascript" src="lib/bootstrap-material-design/dist/js/ripples.min.js"></script>
 	
 	<script type="text/javascript" src="lib/d3/d3.min.js"></script>
-	<script type="text/javascript" src="lib/nvd3/build/nv.d3.min.js"></script>
 	
 	<script type="text/javascript" src="lib/c3/c3.min.js"></script>
 	

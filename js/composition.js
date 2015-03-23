@@ -11,18 +11,26 @@ var composition = c3.generate({
 			['Communication', 28.57, 7.14, 7.14, 0.00, 14.29, 7.14, 14.29, 0.00, 7.14, 14.29, 0.00]
 		],
         type: 'bar',
-		x: 'x'
+		x: 'x',
+		colors: {
+			'All': colors[1],
+			'Development': colors[4],
+			'Management, security & consultancy': colors[7],
+			'Hardware': colors[11],
+			'Communication': colors[14]
+		}
     },
     bar: {
         width: {
             ratio: 0.9 // this makes bar width 50% of length between ticks
         }
-        // or
-        //width: 100 // this makes bar width 100px
     },
     axis: {
         x: {
             type: 'category' // this needed to load string x value
         }
-    }
+    },
+	tooltip: {
+		show: false
+	}
 });
