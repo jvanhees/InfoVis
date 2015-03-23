@@ -25,7 +25,7 @@ foreach ($dir as $fileinfo) {
     <link href="lib/bootstrap-material-design/dist/css/material.min.css" rel="stylesheet">
     <link href="lib/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet">
 	
-    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="css/animate.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	
 	<link rel="stylesheet" href="lib/nvd3/build/nv.d3.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="lib/c3/c3.min.css" rel="stylesheet">
@@ -33,8 +33,9 @@ foreach ($dir as $fileinfo) {
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	<link rel="stylesheet" href="css/chart.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	
-	
-	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+
+<!--	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>-->
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 
 	<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="lib/bootstrap-material-design/dist/js/material.min.js"></script>
