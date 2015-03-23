@@ -13,7 +13,7 @@ var svg = d3.select(".container #slide-1").append("svg")
     .attr("height", height);
 
 
-var activeSlide = 1;
+var activeSlide = parseInt($('.pages .active').attr('id').replace('page-', ''));
 var state = 0;
 
 function nextSlide(){
@@ -40,9 +40,9 @@ function showSlide(slideNumber){
 		$slide.next().not('#next-button').addClass('first');
 		$slide.nextAll().not('#next-button').addClass('after');
 		// $('#next-button').addClass('quick-hide');
-// 		setTimeout(function(){
-// 				$('#next-button').removeClass('quick-hide');
-// 		}, 500);
+		setTimeout(function(){
+			$(document).trigger('nextSlide', {'slide': slideNumber});
+		}, 500);
 	}
 }
 
