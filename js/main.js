@@ -12,24 +12,42 @@ var svg = d3.select(".container #slide-1").append("svg")
     .attr("height", height);
 
 var activeSlide = 1;
+var totalStates = 1;
 
 $(document).ready(function(){
-	parseInt($('.pages .active').attr('id').replace('page-', ''));	
+	activeSlide = parseInt($('.pages .active').attr('id').replace('page-', ''));
+	totalStates = $('.pages .active').find('.state').length;
 });
 
-var state = 0;
+var activeState = 1;
 
 function nextSlide(){
-	showSlide(activeSlide + 1);
+	if(activeState < totalStates){
+		activeState++;
+		broadcast();
+	} else {
+		showSlide(activeSlide + 1);
+	}
 }
 
 function previousSlide(){
-	showSlide(activeSlide - 1);
+	if(activeState > 1){
+		activeState--;
+	} else {
+		showSlide(activeSlide - 1);
+	}
 }
+
+$(document).on('update', function(data){
+	console.log('slide:' + data.activeSlide);
+	console.log('state:' + data.activeState);
+});
 
 function showSlide(slideNumber){
 	var $slide = $('.page#page-'+slideNumber);
 	if($slide.length > 0){
+		totalStates = $slide.find('.state').length;
+		activeState = 1;
 		activeSlide = slideNumber;
 
 		// Remove active from all
@@ -44,9 +62,18 @@ function showSlide(slideNumber){
 		$slide.nextAll().not('#next-button').addClass('after');
 		// $('#next-button').addClass('quick-hide');
 		setTimeout(function(){
-			$(document).trigger('nextSlide', {'slide': slideNumber});
+			broadcast();
 		}, 500);
+		
 	}
+}
+
+function broadcast(){
+	$(document).trigger({
+		type: 'update',
+		activeSlide: activeSlide,
+		activeState: activeState
+	});
 }
 
 $.material.init();
