@@ -1,4 +1,4 @@
-var chart = c3.generate({
+var yearchart = c3.generate({
 	bindto: '#company-year-chart',
 	data: {
 		x: 'x',

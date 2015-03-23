@@ -3,28 +3,39 @@
 <link rel="stylesheet" href="pages/3-company-history.css">
 
 <script>
-    $(document).on('update', function(data) {
-        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-        if (data.activeSlide == 3){
-            $('#introcities').css('display','block');
-            $('#introcities').addClass('animated flipInX');
-            $('#visual').css('display','none');
-            if (data.activeState == 2){
-                $('#introcities').addClass('animated flipOutX');
-                $('#visual').css('display','block');
-                $('#visual').addClass('animated zoomIn');
-            }
-        } else {
-            $('#visual').css('display','none');
-            $('#visual').one(animationEnd,function(){
-                $(this).removeClass('animated zoomIn');
-            });
-            $('#introcities').css('display','none');
-            $('#introcities').one(animationEnd,function(){
-                $(this).removeClass('animated flipInX flipOutX');
-            });
+$(window).on('resize', function(){
+	yearchart.resize({
+		width: $(yearchart.element).parent().width(),
+		height: $(yearchart.element).parent().height()
+	});	
+});
+$(document).on('update', function(data) {
+    var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+    if (data.activeSlide == 3){
+        $('#introcities').css('display','block');
+        $('#introcities').addClass('animated fadeIn');
+        $('#visual').css('display','none');
+        if (data.activeState == 2){
+            $('#introcities').addClass('animated fadeOut');
+            $('#visual').css('display','block');
+            $('#visual').addClass('animated fadeIn');
+			yearchart.resize({
+				width: $(yearchart.element).parent().width(),
+				height: $(yearchart.element).parent().height()
+			});
+
         }
-    });
+    } else if(data.activeSlide > 3) {
+        $('#visual').css('display','none');
+        $('#visual').one(animationEnd,function(){
+            $(this).removeClass('animated zoomIn');
+        });
+        $('#introcities').css('display','none');
+        $('#introcities').one(animationEnd,function(){
+            $(this).removeClass('animated flipInX flipOutX');
+        });
+    }
+});
 </script>
 
 <div class="state" id="introcities">

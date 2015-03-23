@@ -13,11 +13,3 @@
 .c3-xgrid-line.active line {
 	stroke: #2196f3;
 }
-#events > div {
-	
-}
-#events > div:hover {
-	margin-left: -10px;
-	padding-left: 9px;
-	border-left: 3px solid #2196f3;
-}

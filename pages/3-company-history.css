@@ -45,3 +45,25 @@ p span {
     display: none;
     -webkit-animation-delay: 0.7s;
 }
+#events > div {
+	
+}
+#events > div:hover {
+	margin-left: -10px;
+	padding-left: 7px;
+	border-left: 3px solid #2196f3;
+}
+#events::-webkit-scrollbar {
+    height: 12px;
+    width: 6px;
+    background: none;
+	opacity: 0.5;
+}
+
+#events::-webkit-scrollbar-thumb {
+    background: #E9E9E9;
+    -webkit-border-radius: 1ex;
+
+#events::-webkit-scrollbar-corner {
+    background: #000;
+}

@@ -87,9 +87,9 @@ function showSlide(slideNumber){
 function broadcast(){
 	if(activeState == totalStates){
 		// Last state..
-		$('.next-button i').removeClass('mdi-navigation-chevron-right').addClass('mdi-navigation-arrow-forward')
+		$('.next-button i').removeClass('mdi-navigation-expand-more').addClass('mdi-navigation-arrow-forward');
 	} else {
-		$('.next-button i').removeClass('mdi-navigation-arrow-forward').addClass('mdi-navigation-chevron-right')
+		$('.next-button i').removeClass('mdi-navigation-arrow-forward').addClass('mdi-navigation-expand-more');
 	}
 	$(document).trigger({
 		type: 'update',

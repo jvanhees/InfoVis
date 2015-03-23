@@ -39,32 +39,3 @@ $('#page-5 .category').each(function(){
 		}
 	});
 });
-//
-//
-// var categoriesLA = c3.generate({
-// 	bindto: '#categories-la',
-//     data: {
-//         // iris data from R
-//         columns: ,
-//         type : 'pie',
-// 		order: null
-//     },
-// 	legend: {
-// 		show: false
-// 	}
-// });
-//
-// var categoriesLondon = c3.generate({
-// 	bindto: '#categories-london',
-//     data: {
-//         // iris data from R
-//         columns: ,
-//         type : 'pie',
-// 		order: null
-//     },
-// 	legend: {
-// 		show: false
-// 	}
-// });
-//
-// console.log(categoriesAmsterdam);
