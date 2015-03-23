@@ -34,18 +34,24 @@ a:hover{text-decoration: none;}
 }
 
 .pages .page {
-	transition: left 1s;
+	transition: left 1s, background-color 1s, opacity 1s;
 	position: absolute;
 	top: 0;
 	bottom: 130px;
 	width: 94%;
+	background-color: rgba(255, 255, 255, 0.85);
+	opacity: 0.5;
+}
+.pages .page#page-2 {
+	background: none;
 }
 .pages .page .content {
 }
 
 .pages .page.active {
 	left: 3%;
-    opacity: 0.86;
+	background-color: rgba(255, 255, 255, 0.9);
+	opacity: 1;
 }
 
 .pages .page.before {

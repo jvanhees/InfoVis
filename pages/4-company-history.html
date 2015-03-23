@@ -11,10 +11,9 @@ $(window).on('resize', function(){
 });
 $(document).on('update', function(data) {
     var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-    if (data.activeSlide == 3){
+    if (data.activeSlide == 4){
         $('#introcities').css('display','block');
         $('#introcities').addClass('animated fadeIn');
-        $('#visual').css('display','none');
         if (data.activeState == 2){
             $('#introcities').addClass('animated fadeOut');
             $('#visual').css('display','block');
@@ -23,8 +22,10 @@ $(document).on('update', function(data) {
 				width: $(yearchart.element).parent().width(),
 				height: $(yearchart.element).parent().height()
 			});
+        } else {
+	        $('#visual').css('display','none');
         }
-    } else if(data.activeSlide > 3) {
+    } else if(data.activeSlide > 4) {
         $('#visual').css('display','none');
         $('#visual').one(animationEnd,function(){
             $(this).removeClass('animated zoomIn');
@@ -50,19 +51,19 @@ $(document).on('update', function(data) {
 			<p>CERN (European Organization for Nuclear Research) introduces the World Wide Web to the public. </p>
 		</div>
         
-        <div>
+        <div data-year="1992">
             <p><span>1992 - </span> The first audio and video are distributed over the Internet. The phrase “surfing the Internet” is popularized. </p>
         </div>
         
-        <div>
+        <div data-year="1994">
         <p><span>1994 - </span> Microsoft creates a Web browser for Windows 95.</p>
         </div>
         
-        <div>
+        <div data-year="1995">
             <p><span>1995 - </span> SSL encryption was developed by Netscape, making it safer to conduct financial transactions online, which enables Internet shopping.</p>
         </div>
         
-        <div>
+        <div data-year="1997">
             <p><span>1997 - </span> August 1, Steve Jobs returns to Apple Computer, Inc at Macworld in Boston. One week later, Microsoft buys a $150 million share of financially troubled Apple Computer.</p>
         </div>
 	
@@ -71,15 +72,15 @@ $(document).on('update', function(data) {
 			<p>The Google search engine is born. Now the most-used search engine on the Web.</p>
 		</div>
         
-        <div>
+        <div data-year="1998">
             <p><span>1998 - </span> The United States Department of Justice and 20 U.S. states file an antitrust case against Microsoft. America Online announces it will acquire Netscape Communications in a stock-for-stock transaction worth US $4.2 billion.</p>
         </div>
         
-        <div>
+        <div data-year="1999">
             <p><span>1999 - </span> Microsoft releases Windows 98, Second Edition.</p>
         </div>
         
-        <div>
+        <div data-year="2000">
             <p><span>2000 - </span>  Founder Nina Brink takes under a lot of media attention Internet service World Online to the stock market. The expectations are high and many traders think they can get quickly rich with the shares. </p>
         </div>
 
@@ -88,7 +89,7 @@ $(document).on('update', function(data) {
 			<p>The infamous Dot-com bubble that bursted in 2001. A massive rise of web-related stocks and companies.</p>
 		</div>
         
-        <div>
+        <div data-year="2001">
             <p><span>2001 - </span> 9/11 terrorist attacks in New York City.</p>
         </div>
 
@@ -97,11 +98,11 @@ $(document).on('update', function(data) {
 			<p>Web 2.0 arrives and Facebook goes online and the era of social networking begins.</p>
 		</div>
         
-        <div>
+        <div data-year="2005">
             <p><span>2005 - </span> YouTube.com launches, bringing free online video hosting and sharing to the masses.</p>
         </div>        
         
-        <div>
+        <div data-year="2005">
             <p><span>2006 - </span> Twitter was created and launched. The service rapidly gained worldwide popularity.</p>
         </div>
 
@@ -110,11 +111,11 @@ $(document).on('update', function(data) {
 			<p>The financial crisis forced a lot of companies to close. It is very clear that the crisis hits Amsterdam two years later.</p>
 		</div>
         
-        <div>
+        <div data-year="2007">
             <p><span>2007 - </span> The first iPhone was unveiled, which was almost wholly responsible for renewed interest in mobile web applications and design.</p>
         </div>
         
-        <div>
+        <div data-year="2010">
             <p><span>2010 - </span> Facebook reaches 400 million active users. </p>
         </div>
         
@@ -125,5 +126,5 @@ $(document).on('update', function(data) {
 	</div>
 </div>
 
-<script src="js/company-year-chart_2.js"></script>
+<script src="js/company-year-chart.js"></script>
 
