@@ -2,20 +2,18 @@
 
 <link rel="stylesheet" href="pages/2-statements.css">
 
+
 <script>
-    $(document).on('update',function(data) {
-        if activeSlide == 2 {
-            var animationName = $();
-        }
-        //var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+    $(document).on('update', function(data) {
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
         var animationName = 'animated flipInX';
-        $("#buttonNext").click(function() {
+        if (activeSlide == 2){
+            $('#statements').css('display','block');
             $('#firstLi').addClass(animationName);
             $('#twoLi').addClass(animationName);
             $('#threeLi').addClass(animationName);
             $('#fourLi').addClass(animationName);
-        });
-
+        }
     });
 </script>
 

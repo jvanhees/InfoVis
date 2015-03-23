@@ -1,12 +1,38 @@
 <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" href="pages/4-company-history.css">
-<!--
-<div style="height: 30%; overflow: auto; display: block;">
-	<h6>As we can see here, Amsterdam compares just fine in terms of overal IT growth.</h6>
+<link rel="stylesheet" href="pages/3-company-history.css">
+
+<script>
+    $(document).on('update', function(data) {
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        if (data.activeSlide == 3){
+            $('#introcities').css('display','block');
+            $('#introcities').addClass('animated flipInX');
+            $('#visual').css('display','none');
+            if (data.activeState == 2){
+                $('#introcities').addClass('animated flipOutX');
+                $('#visual').css('display','block');
+                $('#visual').addClass('animated zoomIn');
+            }
+        } else {
+            $('#visual').css('display','none');
+            $('#visual').one(animationEnd,function(){
+                $(this).removeClass('animated zoomIn');
+            });
+            $('#introcities').css('display','none');
+            $('#introcities').one(animationEnd,function(){
+                $(this).removeClass('animated flipInX flipOutX');
+            });
+        }
+    });
+</script>
+
+<div class="state" id="introcities">
+    <p><span style="color:#009587; text-decoration:underline;">Amsterdam</span>, <span style="color:#009587; text-decoration:underline;">London</span>, and <span style="color:#009587; text-decoration:underline;">Los Angeles</span> are facing the impact of emerging trends among new technological innovations and increased connectivity. </br></br>
+    The following slide illustrates the growth of companies that started in the ICT sector. </p>
 </div>
--->
-<div style="height: 100%; overflow: hidden;">
+
+<div class="state" id="visual" style="height: 100%; overflow: hidden;">
 	<div class="col-md-3" id="events" style="height:100%;overflow-y: scroll;">
         <h2>Events</h2><hr>
 		<div data-ref="www">

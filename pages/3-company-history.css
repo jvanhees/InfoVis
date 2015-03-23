@@ -25,3 +25,23 @@ p span {
     font-weight: 400;
     color: #009587;
 }
+
+#introcities {
+  position: absolute;
+  top: 30%;
+  /* left: 20%; */
+  margin: 0 155px;
+  display: none;
+}
+
+#introcities p {
+  font-size: 2em;
+  font-family: 'Old Standard TT', serif;
+  text-align: justify;
+  font-weight: 300;
+}
+
+#visual {
+    display: none;
+    -webkit-animation-delay: 0.7s;
+}

@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic|Oswald:400,700,300);
 
 #statements {
-  display: block;
+  display: none;
   width: 73%;
   height: auto;
   top: 11%;
@@ -34,7 +34,7 @@
 }
 
 #statements li:nth-child(1) {
-    -webkit-animation-delay: 0.9s;
+    -webkit-animation-delay: 0.7s;
 }
 
 #statements li:nth-child(2) {
