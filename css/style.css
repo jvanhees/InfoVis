@@ -45,6 +45,7 @@ a:hover{text-decoration: none;}
 
 .pages .page.active {
 	left: 3%;
+    opacity: 0.86;
 }
 
 .pages .page.before {
