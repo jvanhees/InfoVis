@@ -2,13 +2,31 @@
 
 <link rel="stylesheet" href="pages/2-statements.css">
 
+<script>
+    $(document).on('update',function(data) {
+        if activeSlide == 2 {
+            var animationName = $();
+        }
+        //var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        var animationName = 'animated flipInX';
+        $("#buttonNext").click(function() {
+            $('#firstLi').addClass(animationName);
+            $('#twoLi').addClass(animationName);
+            $('#threeLi').addClass(animationName);
+            $('#fourLi').addClass(animationName);
+        });
+
+    });
+</script>
+
+
 <!--    Statements  -->
 <div id="statements" class="">
     <h1>Amsterdam...</h1>
     <ol type="1">
-        <li class="state animated flipInX">is a thriving tech hub with developing <span style="color:#009587; text-decoration:underline;">innovative</span> tech companies</li>
-        <li class="state animated flipInX">has cross-border collaborations between the <span style="color:#009587; text-decoration:underline;">digital</span>, creative and marketing workforces</li>
-        <li class="state animated flipInX">is <span style="color:#009587;text-decoration:underline">THE</span> place to start a business in the ICT industry</li>
-        <li class="state animated flipInX"> has potentially <span style="color:#009587;text-decoration:underline">higher</span> chances of finding a tech-related job</li>
+        <li id="firstLi" class="">is a thriving tech hub with developing <span style="color:#009587; text-decoration:underline;">innovative</span> tech companies</li>
+        <li id="twoLi" class="">has cross-border collaborations between the <span style="color:#009587; text-decoration:underline;">digital</span>, creative and marketing workforces</li>
+        <li id="threeLi" class="">is <span style="color:#009587;text-decoration:underline">THE</span> place to start a business in the ICT industry</li>
+        <li id="fourLi" class=""> has potentially <span style="color:#009587;text-decoration:underline">higher</span> chances of finding a tech-related job</li>
     </ol>
 </div>
