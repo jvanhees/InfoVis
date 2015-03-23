@@ -11,9 +11,7 @@ var yearchart = c3.generate({
 		],
 		type: 'spline',
 		colors: {
-			'Amsterdam': colors[0],
-			'Los Angeles': colors[5],
-			'London': colors[9]
+			
 		}
 	},
 	axis: {

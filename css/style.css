@@ -34,22 +34,18 @@ a:hover{text-decoration: none;}
 }
 
 .pages .page {
-	transition: left 1s, background-color 1s;
+	transition: left 1s;
 	position: absolute;
 	top: 0;
 	bottom: 130px;
 	width: 94%;
-	background-color: rgba(255, 255, 255, 0.5);
-}
-.pages .page#page-1 {
-	background: none;
 }
 .pages .page .content {
 }
 
 .pages .page.active {
 	left: 3%;
-	background-color: rgba(255, 255, 255, 1);
+    opacity: 0.86;
 }
 
 .pages .page.before {
