@@ -79,12 +79,18 @@ function showSlide(slideNumber){
 		// $('#next-button').addClass('quick-hide');
 		setTimeout(function(){
 			broadcast();
-		}, 500);
+		}, 1000);
 		
 	}
 }
 
 function broadcast(){
+	if(activeState == totalStates){
+		// Last state..
+		$('.next-button i').removeClass('mdi-navigation-chevron-right').addClass('mdi-navigation-arrow-forward')
+	} else {
+		$('.next-button i').removeClass('mdi-navigation-arrow-forward').addClass('mdi-navigation-chevron-right')
+	}
 	$(document).trigger({
 		type: 'update',
 		activeSlide: activeSlide,
