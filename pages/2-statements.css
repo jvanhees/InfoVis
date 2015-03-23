@@ -1,0 +1,50 @@
+@import url(http://fonts.googleapis.com/css?family=Old+Standard+TT:400,700);
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic|Oswald:400,700,300);
+
+#statements {
+  display: block;
+  width: 73%;
+  height: auto;
+  top: 11%;
+  left: 15%;
+  position: absolute;
+  font-family: 'Oswald', serif;
+  -webkit-animation-delay: 1.1s;
+}
+
+#statements h1 {
+  font-family: 'Oswald', serif;
+  font-size: 6em;
+  text-align: left;
+  font-weight: 400;
+  margin-bottom: 40px;
+  color: #005C52;
+}
+
+#statements h2 {
+    font-size: 2em;
+    font-family: 'Oswald', serif;
+    text-align: left;
+    font-weight: 400;
+}
+
+#statements li {
+    font-size: 2em;
+    margin: 25px 0px;
+}
+
+#statements li:nth-child(1) {
+    -webkit-animation-delay: 1.9s;
+}
+
+#statements li:nth-child(2) {
+    -webkit-animation-delay: 2.3s;
+}
+
+#statements li:nth-child(3) {
+    -webkit-animation-delay: 2.7s;
+}
+
+#statements li:nth-child(4) {
+    -webkit-animation-delay: 3.1s;
+}

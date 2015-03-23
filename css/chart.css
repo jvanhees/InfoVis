@@ -7,6 +7,8 @@
 }
 .c3-xgrid-line.active text {
 	fill: #2196f3;
+    font-weight: 700;
+    font-size: 12px;
 }
 .c3-xgrid-line.active line {
 	stroke: #2196f3;
@@ -17,5 +19,5 @@
 #events > div:hover {
 	margin-left: -10px;
 	padding-left: 9px;
-	border-left: 1px solid #2196f3;
+	border-left: 3px solid #2196f3;
 }
