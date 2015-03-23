@@ -1,3 +1,21 @@
+#company-year-chart {
+	max-height: auto !important;
+}
+
 .c3-xgrid-focus {
 	display: none;
+}
+.c3-xgrid-line.active text {
+	fill: #2196f3;
+}
+.c3-xgrid-line.active line {
+	stroke: #2196f3;
+}
+#events > div {
+	
+}
+#events > div:hover {
+	margin-left: -10px;
+	padding-left: 9px;
+	border-left: 1px solid #2196f3;
 }
