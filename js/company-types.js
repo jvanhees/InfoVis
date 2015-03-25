@@ -35,7 +35,7 @@ $('#page-5 .category').each(function(){
 			show: false
 		},
 		tooltip: {
-			show: false
+			show: true
 		}
 	});
 });

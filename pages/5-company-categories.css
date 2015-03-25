@@ -1,0 +1,79 @@
+.c3-chart-arc text {
+    font-size: 1.1em;
+}
+
+#wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+#charts {
+    width: 50%;
+    float: left
+}
+
+#text {
+    width: 50%;
+    float: right;
+}
+
+#charts h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 0;
+    text-decoration: underline;
+}
+
+#catAms {
+    position: absolute;
+    width: 26%;
+    top: 12%;
+    left: 10%;
+}
+
+#catLon {
+    position: relative;
+    margin-top: 55%;
+    margin-left: 2%;
+    width: 34%;
+    float: left;
+}
+
+#catLon h3 {
+  position: absolute;
+  left: 34%;
+}
+
+#catLA {
+    position: relative;
+    margin-top: 55%;
+    margin-right: 9%;
+    width: 34%;
+    float: right;
+}
+
+#catLA h3 {
+  position: absolute;
+  left: 26%;
+}
+
+#legend {
+    position: absolute;
+    top: 96%;
+    left: 1%;
+}
+
+#statement1 {
+/*
+    position: absolute;
+    top: 66%;
+    left: 23%;
+    width: 672px;
+*/
+}
+
+#statement1 p {
+/*
+    font-size: 1.3em;
+    text-align: justify;
+*/
+}

@@ -1,6 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Old+Standard+TT:400,700);
 @import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic|Oswald:400,700,300);
 
+.class {
+    margin-left: 40px;
+}
+
 h2 {
   font-size: 2.2em;
   font-family: 'Oswald', serif;
@@ -28,9 +32,22 @@ p span {
 
 #introcities {
   position: absolute;
-  top: 15%;
+  top: 20%;
   margin: 0 155px;
   display: none;
+}
+
+#intronext {
+  position: absolute;
+  margin: 173px 0px;
+  display: none;
+}
+
+#intronext p {
+    font-size:1.5em; 
+    text-align: center; 
+    color:#009587; 
+    text-decoration:underline;
 }
 
 #introcities p {
@@ -49,6 +66,10 @@ p span {
   margin-left: 32px;
 }
 
+#counterAms:hover {
+    background-color: #e5e5e5;
+}
+
 #counterAms h4, h3{
     font-family: 'Oswald',serif;
     text-align: center;
@@ -65,6 +86,20 @@ p span {
     text-align: center;
     color: #009587;
     font-size: 1.3em;
+}
+
+#conclusion {
+    display: none;
+}
+
+#conclusion p {
+  position: absolute;
+  top: 22%;
+  margin: 0 155px;
+  font-size: 2em;
+  font-family: 'sans-serif', serif;
+  text-align: justify;
+  font-weight: 300;
 }
 
 #visual {

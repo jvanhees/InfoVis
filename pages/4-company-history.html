@@ -13,6 +13,7 @@ $(document).on('update', function(data) {
     var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
     if (data.activeSlide == 4){
         $('#introcities').css('display','block');
+        $('#intronext').css('display','block');
         $('#introcities').addClass('animated fadeIn');
         $('.Count').each(function () {
             $(this).prop('Counter',0).animate({
@@ -34,6 +35,9 @@ $(document).on('update', function(data) {
 			});
         } else {
 	        $('#visual').css('display','none');
+        } if (data.activeState == 3){
+            $('#conclusion').css('display','block');
+            $('#conclusion').addClass('animated fadeIn');   
         }
     } else if(data.activeSlide > 4) {
         $('#visual').css('display','none');
@@ -48,9 +52,10 @@ $(document).on('update', function(data) {
 });
 </script>
 
+
 <div class="state" id="introcities">
     <p><span style="color:#009587; text-decoration:underline;">Amsterdam</span>, <span style="color:#009587; text-decoration:underline;">London</span>, and <span style="color:#009587; text-decoration:underline;">Los Angeles</span> are facing the impact of emerging trends among new technological innovations and increased connectivity. </br></p>
-    <p style="margin-top:30px;">Tech related companies by the numbers:</p>
+    <p style="margin-top:30px;"> &#x27a4; Tech related companies by the numbers:</p>
     <div id="numbercount" style="margin-top:38px;">
         <div id="counterAms">
           <h4>Amsterdam</h4>
@@ -68,8 +73,12 @@ $(document).on('update', function(data) {
           <p class="count-text ">ICT companies</p>
         </div>
     </div>
-    <p style="font-size:1.5em; text-align: center; color:#009587; text-decoration:underline;">The following illustrates the growth of companies that started in the ICT sector.</p>
+
+    <div id="intronext">
+        <p style="font-size:1.8em;"> &#x27a4; The following illustrates the growth of companies that started in the ICT sector.</p>
+    </div>
 </div>
+
 
 
 <!------------------------------------------- DATA DATA DATA DATA DATA DATA DATA ------------------------------------------------------------->
@@ -167,3 +176,6 @@ $(document).on('update', function(data) {
 
 <script src="js/company-year-chart.js"></script>
 
+<div class="state" id="conclusion">
+    <p> &#x2937; The graph shows that ICT is a <span style="color:#009587; text-decoration:underline;">vibrant</span> branch for companies in Amsterdam. Despite that Amsterdam is the smallest city from all three; it has a <span style="color:#009587; text-decoration:underline;">stronger growth</span> than London and LA. </br></br> Due to that strong growth and entrepreneurial spirit, Amsterdam is an <span style="color:#009587; text-decoration:underline;">attractive</span> city to establish a business.</br></br> Additionally, more startups, means <span style="color:#009587; text-decoration:underline;">more jobs<span style="color:#009587; text-decoration:underline;">!  </p>
+</div>
