@@ -1,0 +1,41 @@
+<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="pages/1-introams.css">
+
+
+<script>
+    $(document).on('update', function(data) {
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        if (data.activeState == 2){
+            $('#animateImg').css('display','block');
+            $('#animateImg').addClass('animated fadeIn'); 
+            $('#paraFade').css('display','block');
+            $('#paraFade').addClass('animated zoomIn');
+            $('#londonImg').addClass('animated fadeIn');
+            $('#laImg').addClass('animated fadeIn');
+        }
+    });
+</script>
+
+<!--HEADER / TITLE-->
+
+<div class="state">
+    <div id="intro" class="">
+        <h1>Amsterdam</h1>
+        <h3>the best place to start your ICT business, and to find the best-fit ICT job</h3>
+        <p id="paraFade" class="">A location based comparison of tech related  <br> companies in <strong>Amsterdam</strong>, <strong>London</strong> and <strong>Los Angeles</strong></p>
+    </div>
+
+    <div id="amsImg">
+        <img src="assets/amsterdamImg.png" width="90%">
+    </div>
+</div>
+
+<div id="animateImg" class="state">
+    <div id="londonImg">
+        <img src="assets/londonImg.png" width="90%">
+    </div>
+    <div id="laImg">
+        <img src="assets/laImg.png" width="40%">
+    </div>
+</div>
