@@ -28,23 +28,64 @@ p span {
 
 #introcities {
   position: absolute;
-  top: 30%;
-  /* left: 20%; */
+  top: 15%;
   margin: 0 155px;
   display: none;
 }
 
 #introcities p {
   font-size: 2em;
-  font-family: 'Old Standard TT', serif;
+  font-family: 'sans-serif', serif;
   text-align: justify;
   font-weight: 300;
+}
+
+#counterAms {
+  float: left;
+  width: 28%;
+  height: 20%;
+  border: #009587 4px solid;
+  padding: 2px;
+  margin-left: 32px;
+}
+
+#counterAms h4, h3{
+    font-family: 'Oswald',serif;
+    text-align: center;
+}
+
+#counterAms h4{
+    font-size: 1.6em;
+    font-family: 'Oswald',serif;
+    text-align: center;
+    font-weight: 400;
+}
+
+#counterAms p{
+    text-align: center;
+    color: #009587;
+    font-size: 1.3em;
 }
 
 #visual {
     display: none;
     -webkit-animation-delay: 0.7s;
 }
+
+#events p {
+  text-align: justify;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+#events h3 {
+  text-align: left;
+  font-size: 1.3em;
+  font-family: 'Oswald',serif;
+  font-weight: 400;
+  color: #009587;
+}
+
 #events > div {
 	
 }

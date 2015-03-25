@@ -1,0 +1,54 @@
+#intro, h1, p {
+    text-align: center;
+    font-family: 'Oswald', serif;
+}
+
+#intro h1 {
+    font-weight: 400;
+    font-size: 6em;
+    color: #005C52;
+}
+
+#intro h3 {
+    font-weight: 400;
+    font-size: 1.7em;
+    color: #009587;
+    line-height: normal;
+}
+
+#paraFade {
+    display: none;
+    font-size: 1.5em;
+    margin-top: 53px;
+}
+
+#amsImg {
+  position: absolute;
+  top: 52%;
+  left: 5%;
+  width: 100%;
+  z-index: 1;
+}
+
+#animateImg {
+    display: none;
+}
+
+#laImg {
+  position: absolute;
+  top: 30%;
+  left: 6%;
+  opacity: 0.5;
+  z-index: 0;
+  -webkit-animation-delay: 0.7s;
+}
+
+#londonImg {
+  position: absolute;
+  top: 25%;
+  left: 75%;
+  transform: rotate(13deg);
+  opacity: 0.5;
+  z-index: 0;
+  -webkit-animation-delay: 1s;
+}

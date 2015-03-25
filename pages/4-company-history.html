@@ -14,6 +14,16 @@ $(document).on('update', function(data) {
     if (data.activeSlide == 4){
         $('#introcities').css('display','block');
         $('#introcities').addClass('animated fadeIn');
+        $('.Count').each(function () {
+            $(this).prop('Counter',0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 8000,
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
         if (data.activeState == 2){
             $('#introcities').addClass('animated fadeOut');
             $('#visual').css('display','block');
@@ -39,9 +49,30 @@ $(document).on('update', function(data) {
 </script>
 
 <div class="state" id="introcities">
-    <p><span style="color:#009587; text-decoration:underline;">Amsterdam</span>, <span style="color:#009587; text-decoration:underline;">London</span>, and <span style="color:#009587; text-decoration:underline;">Los Angeles</span> are facing the impact of emerging trends among new technological innovations and increased connectivity. </br></br>
-    The following slide illustrates the growth of companies that started in the ICT sector. </p>
+    <p><span style="color:#009587; text-decoration:underline;">Amsterdam</span>, <span style="color:#009587; text-decoration:underline;">London</span>, and <span style="color:#009587; text-decoration:underline;">Los Angeles</span> are facing the impact of emerging trends among new technological innovations and increased connectivity. </br></p>
+    <p style="margin-top:30px;">Tech related companies by the numbers:</p>
+    <div id="numbercount" style="margin-top:38px;">
+        <div id="counterAms">
+          <h4>Amsterdam</h4>
+          <h3><span class="Count">18441</span></h3>
+          <p class="count-text ">ICT companies</p>
+        </div>
+        <div id="counterAms">
+          <h4>London</h4>
+          <h3><span class="Count">19445</span></h3>
+          <p class="count-text ">ICT companies</p>
+        </div>
+        <div id="counterAms" style="margin-bottom:59px;">
+          <h4>Los Angeles</h4>
+          <h3><span class="Count">32492</span></h3>
+          <p class="count-text ">ICT companies</p>
+        </div>
+    </div>
+    <p style="font-size:1.5em; text-align: center; color:#009587; text-decoration:underline;">The following illustrates the growth of companies that started in the ICT sector.</p>
 </div>
+
+
+<!------------------------------------------- DATA DATA DATA DATA DATA DATA DATA ------------------------------------------------------------->
 
 <div class="state" id="visual" style="height: 100%; overflow: hidden;">
 	<div class="col-md-3" id="events" style="height:100%;overflow-y: scroll;">
@@ -102,7 +133,7 @@ $(document).on('update', function(data) {
             <p><span>2005 - </span> YouTube.com launches, bringing free online video hosting and sharing to the masses.</p>
         </div>        
         
-        <div data-year="2005">
+        <div data-year="2006">
             <p><span>2006 - </span> Twitter was created and launched. The service rapidly gained worldwide popularity.</p>
         </div>
 
@@ -116,7 +147,15 @@ $(document).on('update', function(data) {
         </div>
         
         <div data-year="2010">
-            <p><span>2010 - </span> Facebook reaches 400 million active users. </p>
+            <p><span>2010 - </span> Facebook reaches 400 million active users, and the release of Instagram. Additionally, the first generation iPad was        available.</p>
+        </div>
+        
+        <div data-year="2012">
+            <p><span>2012 - </span> Release Windows 8. </p>
+        </div>
+        
+        <div data-year="2013">
+            <p><span>2013 - </span> Release Google Glass. </p>
         </div>
         
 	</div>

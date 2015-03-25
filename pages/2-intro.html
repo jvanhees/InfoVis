@@ -4,8 +4,9 @@
 
 <script>
     $(document).on('update', function(data) {
-        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+//        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
         if (data.activeSlide == 2){
+            console.log("current slide is: " + activeSlide);
             $('.article').css('display','block');
             $('#container1').addClass('animated fadeInLeft');
             $('#container2').addClass('animated fadeInDownBig');
