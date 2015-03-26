@@ -1,0 +1,51 @@
+<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="pages/8-conclusion.css">
+
+
+<script>
+    $(document).on('update', function(data) {
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        var animationName = 'animated flipInX';
+        if (data.activeSlide == 8){
+            $('#finalConclusion').css('display','block');  
+            $('#finalConclusion').addClass('animated fadeIn');  
+            $('#fact1').addClass(animationName);
+            $('#fact2').addClass(animationName);
+            $('#fact3').addClass(animationName);
+            $('#fact4').addClass(animationName);
+            $('#fact5').addClass(animationName);
+        }
+    });
+    
+</script>
+
+<!--
+<script>
+    $(document).on('update', function(data) {
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        var animationName = 'animated flipInX';
+        if (data.activeSlide == 8){
+            $('#statements').css('display','block');
+            $('#firstLi').addClass(animationName);
+            $('#twoLi').addClass(animationName);
+            $('#threeLi').addClass(animationName);
+            $('#fourLi').addClass(animationName);
+        }
+    });
+</script>
+-->
+
+
+<!--    Statements  -->
+
+<div id="finalConclusion" class="">
+    <h3>So, <span style="color:#009587; text-decoration:underline;">Amsterdam</span> is the best place to start your ICT business, and to find the best-fit ICT job, because:</h3>
+        <ol type="1">
+            <li id="fact1" class="">it has a <span style="color:#009587; text-decoration:underline;">strong growth</span> in new ICT related startups, and entrepreneurial spirit;</li>
+            <li id="fact2" class="">there is a <span style="color:#009587; text-decoration:underline;">high amount</span> of ICT related companies, which means <span style="color:#009587; text-decoration:underline;">more potential jobs</span> available;</li>
+            <li id="fact3" class="">it is a breeding ground for <span style="color:#009587; text-decoration:underline;">creativity</span> due the high percentage of development companies;</li>
+            <li id="fact4" class="">it stimulates a healthy <span style="color:#009587; text-decoration:underline;">work-life balance</span>;</li>
+            <li id="fact5" class="">many <span style="color:#009587; text-decoration:underline;">positive support</span> to start a ICT company;</li>
+            </ol>
+</div>
