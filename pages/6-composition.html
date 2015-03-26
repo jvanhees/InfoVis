@@ -1,5 +1,138 @@
 <div style="height: 100%" id="composition">
+	
+	<div class="composition-graph-container hidden animated" style="height: 70%;">
+		<div class="state" id="composition-graph"></div>
+	</div>
+
+	<div class="text" style="height: 30%;">
+		<p class="animated state-1">The number of IT companies in <span>Amsterdam</span> is relatively high, since London contains a lot <span>more citizens</span> but has a similiar amount of IT companies.</p>
+		<p class="animated state state-2 hidden">This histogram displays Amsterdam IT companies by <span>number of employees</span>.</p>
+		<p class="animated state state-3 hidden">It is clear that Amsterdam features a large number of single-person companies, also called 'ZZP'ers.</p>
+		<p class="animated state-3 hidden">A lot of these ZZP'ers work in development...</p>
+		
+		<p class="animated state state-4 hidden">...while the communication field is covered by bigger companies.</p>
+		
+		<p class="animated state state-5 hidden">Overview of the distribution per sector.</p>
+	</div>
+
 </div>
 
 <script type="text/javascript" src="js/composition.js"></script>
 <script type="text/javascript" src="data/composition.json"></script>
+
+<link rel="stylesheet" href="pages/6-composition.css">
+
+<script>
+$(window).on('resize', function(){
+	composition.resize({
+		width: $(composition.element).parent().width(),
+		height: $(composition.element).parent().height()
+	});	
+});
+
+$(document).on('update', function(data) {
+	if(data.activeSlide == 6){
+		if(data.activeState == 2){
+			$('#composition .text').css('top', '70%');
+			$('#composition .text .state-1').addClass('fadeOutDown');
+			$('#composition').one(animationEnd,function(){
+				$('#composition .text .state-1').addClass('hidden');
+				$('#composition .composition-graph-container').addClass('fadeIn').removeClass('hidden');
+				$('#composition .text .state-2').addClass('fadeInDown').removeClass('hidden');
+				composition.resize({
+					width: $(composition.element).parent().width(),
+					height: $(composition.element).parent().height()
+				});	
+			});
+		}
+		if(data.activeState == 3){
+			$('#composition .text .state-2').addClass('fadeOutDown');
+			$('#composition').one(animationEnd,function(){
+				$('#composition .text .state-3').addClass('fadeInDown').removeClass('hidden');
+				$('#composition .text .state-2').addClass('hidden');
+				composition.load({
+					columns: [
+						getPart('Development'),
+						getRest(['Development'])
+					]
+				})
+				composition.show('Development');
+			});
+		}
+		
+		// if(data.activeState == 4){
+// 			$('#composition .text .state-3').addClass('fadeOutDown');
+// 			$('#composition').one(animationEnd,function(){
+// 				$('#composition .text .state-4').addClass('fadeInDown').removeClass('hidden');
+// 				$('#composition .text .state-3').addClass('hidden');
+// 			});
+//
+// 		}
+		if(data.activeState == 4){
+			$('#composition .text .state-3').addClass('fadeOutDown');
+			$('#composition .composition-graph-container').addClass('fadeOut');
+			$('#composition').one(animationEnd,function(){
+				$('#composition .text').css('height', '10%');
+				$('#composition .composition-graph-container').css('height', '90%');
+				composition.resize({
+					width: $(composition.element).parent().width(),
+					height: $(composition.element).parent().height()
+				});	
+				$('#composition .text .state-4').addClass('fadeInDown').removeClass('hidden');
+				$('#composition .text .state-3').addClass('hidden');
+
+				composition.load({
+					columns: [
+						['Development', 0.6679, 0.2194, 0.0588, 0.0221, 0.0233, 0.0025, 0.0037, 0.0025, 0.00, 0.00],
+						['Management, security & consultancy', 0.6757, 0.1644, 0.0653, 0.0338, 0.0383, 0.0068, 0.0068, 0.0023, 0.0023, 0.0045],
+						['Hardware', 0.8261, 0.1304, 0.000, 0.0217, 0.0000, 0.0000, 0.0000, 0.0217, 0.0000, 0.0000],
+						['Communication', 0.2857, 0.0714, 0.0714, 0.0000, 0.1429, 0.0714, 0.1429, 0.000, 0.0714, 0.1429],
+					]
+				});
+				composition.unload(
+					{
+						ids:['Total']
+					}
+				);
+				composition.groups([]);
+				composition.hide(['Development', 'Management, security & consultancy', 'Hardware']);
+				composition.show(['Communication']);
+				$('#composition .composition-graph-container').removeClass('fadeOut').addClass('fadeIn');
+			});
+		}
+		if(data.activeState == 5){
+			$('#composition .text .state-4').addClass('fadeOutDown');
+			$('#composition').one(animationEnd,function(){
+				$('#composition .text .state-5').addClass('fadeInDown').removeClass('hidden');
+				$('#composition .text .state-4').addClass('hidden');
+			});
+			composition.show(['Development', 'Management, security & consultancy', 'Hardware']);
+		}
+	}
+});
+
+var getRest = function(included){
+	var total = [0.67197,0.196212,0.059091,0.025758,0.028788,0.004545,0.006061,0.00303,0.001515,0.00303];
+	var result = total;
+	included.forEach(function(catvalue, catindex, catarray){
+		var catdata = composition.data.values(catvalue)
+		total.forEach(function(totalvalue, index, totalarray){
+			result[index] = result[index] - (catdata[index] * totalvalue);
+		});
+	});
+	result = ['Total'].concat(result);
+	return result;
+}
+
+var getPart = function(included){
+	var total = [0.67197,0.196212,0.059091,0.025758,0.028788,0.004545,0.006061,0.00303,0.001515,0.00303];
+	var result = [];
+	var catdata = composition.data.values(included)
+	catdata.forEach(function(value, index, array){
+		result[index] = total[index] * value;
+	});
+	result = [included].concat(result);
+	return result;
+}
+
+</script>

@@ -1,0 +1,23 @@
+#composition span {
+	color: #009587;
+	font-family: 'Oswald',serif;
+	text-decoration: underline;
+	font-weight: 400;
+}
+
+#composition .text p.state-1 {
+	font-size: 3em;
+	margin-top: 15%;
+}
+
+#composition .text p {
+	font-size: 2.2em;
+	margin-top: 2%;
+}
+
+#composition .text {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	text-align: center;
+}

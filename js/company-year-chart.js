@@ -56,7 +56,7 @@ var yearchart = c3.generate({
 	}
 });
 
-$('#events > div').hover(function(){
+$('#events > div').hover(function(ev){
 	// in
 	var event = $(this).data('ref');
 	if(event){
@@ -66,17 +66,23 @@ $('#events > div').hover(function(){
 		);
 	} else {
 		var newGrid = specialEvents.concat({value: $(this).data('year'), text: $(this).data('year'), class: 'active'});
-		console.log(newGrid);
 		yearchart.xgrids(
 			newGrid
 		);
 	}
-}, function(){
+}, function(ev){
 	// out
 	var event = $(this).data('ref');
 	if(event){
 		d3.select('#company-year-chart .'+event).classed('active', false);
 	} else {
-		
+
 	}
+});
+
+$('#events').mouseleave(function(ev){
+	console.log(ev);
+	yearchart.xgrids(
+		specialEvents
+	);
 });

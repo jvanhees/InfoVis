@@ -5,7 +5,7 @@
     margin-left: 40px;
 }
 
-h2 {
+#introcities h2 {
   font-size: 2.2em;
   font-family: 'Oswald', serif;
   text-align: left;
@@ -13,18 +13,18 @@ h2 {
   color: #005C52;
 }
 
-h3 {
+#introcities h3 {
   font-size: 1.3em;
   font-family: 'Oswald',serif;
   font-weight: 400;
   color: #009587;
 }
 
-p {
+#introcities p {
     font-size:12px;
 }
 
-p span {
+#introcities p span {
     font-family: 'Oswald',serif;
     font-weight: 400;
     color: #009587;

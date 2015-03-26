@@ -9,6 +9,7 @@ $(window).on('resize', function(){
 		height: $(yearchart.element).parent().height()
 	});	
 });
+var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 $(document).on('update', function(data) {
     var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
     if (data.activeSlide == 4){
