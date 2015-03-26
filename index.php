@@ -61,9 +61,8 @@ foreach ($dir as $fileinfo) {
 			<a class="navbar-brand" href="javascript:void(0)">Amsterdam: Companies in Motion</a>
 		</div>
 		<ul class="nav navbar-nav">
-			<li><a href="javascript:void(0)">Project</a></li>
-			<li><a href="javascript:void(0)">Team</a></li>
-			<li><a href="javascript:void(0)">University of Amsterdam</a></li>
+			<li><a href="https://github.com/jvanhees/InfoVis" target="_blank">Project</a></li>
+			<li><a href="http://student.uva.nl/is" target="_blank">University of Amsterdam</a></li>
 		</ul>
 	</div>
 	
