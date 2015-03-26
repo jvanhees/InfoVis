@@ -24,7 +24,7 @@
     font-size:12px;
 }
 
-#introcities p span {
+p span {
     font-family: 'Oswald',serif;
     font-weight: 400;
     color: #009587;
@@ -39,15 +39,13 @@
 
 #intronext {
   position: absolute;
-  margin: 173px 0px;
+  margin: 200px 0px;
   display: none;
 }
 
 #intronext p {
     font-size:1.5em; 
     text-align: center; 
-    color:#009587; 
-    text-decoration:underline;
 }
 
 #introcities p {

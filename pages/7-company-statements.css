@@ -5,6 +5,12 @@
 
 #events h2 {
     margin-bottom: 14px;
+
+    font-size: 2.2em;
+    font-family: 'Oswald', serif;
+    text-align: left;
+    font-weight: 400;
+    color: #005C52;
 }
 
 

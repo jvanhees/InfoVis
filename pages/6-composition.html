@@ -1,10 +1,10 @@
 <div style="height: 100%" id="composition">
 	
-	<div class="composition-graph-container hidden animated" style="height: 70%;">
+	<div class="composition-graph-container hidden animated" style="height: 80%;">
 		<div class="state" id="composition-graph"></div>
 	</div>
 
-	<div class="text" style="height: 30%;">
+	<div class="text" style="height: 20%;">
 		<p class="animated state-1">The number of IT companies in <span>Amsterdam</span> is relatively high, since London contains a lot <span>more citizens</span> but has a similiar amount of IT companies.</p>
 		<p class="animated state state-2 hidden">This histogram displays Amsterdam IT companies by <span>number of employees</span>.</p>
 		<p class="animated state state-3 hidden">It is clear that Amsterdam features a large number of single-person companies, also called 'ZZP'ers.</p>
@@ -33,7 +33,7 @@ $(window).on('resize', function(){
 $(document).on('update', function(data) {
 	if(data.activeSlide == 6){
 		if(data.activeState == 2){
-			$('#composition .text').css('top', '70%');
+			$('#composition .text').css('top', '80%');
 			$('#composition .text .state-1').addClass('fadeOutDown');
 			$('#composition').one(animationEnd,function(){
 				$('#composition .text .state-1').addClass('hidden');

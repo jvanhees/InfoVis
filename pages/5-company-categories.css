@@ -1,4 +1,5 @@
 .c3-chart-arc text {
+    font-family: 'Oswald', serif;
     font-size: 1.1em;
 }
 
@@ -39,24 +40,30 @@
 }
 
 #conclusion1 h2 {
-    font-size: 1.5em;
+    font-size: 2em;
     text-align: center;
     margin-bottom: 0;
     text-decoration: underline;
+	font-family: 'Oswald', serif;
+	font-weight: 400;
+	color: #005c52;
 }
 
 #conclusion2 p {
     text-align: justify;
     font-size: 1.4em;
-    font-family: 'sans-serif', serif;
+    font-family: 'Oswald', serif;
     padding: 25px 57px;
 }
 
 #conclusion2 h2 {
-    font-size: 1.5em;
+    font-size: 2em;
     text-align: center;
     margin-bottom: 0;
     text-decoration: underline;
+	font-family: 'Oswald', serif;
+	font-weight: 400;
+	color: #005c52;
 }
 
 #conclusion2 {
@@ -75,10 +82,13 @@
 }
 
 #charts h2 {
+	font-family: 'Oswald', serif;
     font-size: 2em;
     text-align: center;
     margin-bottom: 0;
     text-decoration: underline;
+	font-weight: 400;
+	color: #005c52;
 }
 
 #catAms {
@@ -86,11 +96,12 @@
     width: 26%;
     top: 12%;
     left: 10%;
+	color: #009587;
 }
 
 #catLon {
     position: relative;
-    margin-top: 55%;
+    margin-top: 60%;
     margin-left: 2%;
     width: 34%;
     float: left;
@@ -99,11 +110,13 @@
 #catLon h3 {
   position: absolute;
   left: 34%;
+  color: #009587;
+  margin-top: 0px;
 }
 
 #catLA {
     position: relative;
-    margin-top: 55%;
+    margin-top: 60%;
     margin-right: 9%;
     width: 34%;
     float: right;
@@ -112,10 +125,13 @@
 #catLA h3 {
   position: absolute;
   left: 26%;
+  margin-top: 0px;
+	color: #009587;
 }
 
 #legend {
     position: absolute;
     top: 96%;
     left: 1%;
+    color: #009587;
 }

@@ -8,18 +8,31 @@
       opacity: 0.5;
     }
     
+	#credits h2 {
+	    font-size: 2.2em;
+	    font-family: 'Oswald', serif;
+	    text-align: left;
+	    font-weight: 400;
+	    color: #005C52;
+	}
+	
     #credits ul li {
         font-family: 'Oswald', serif;
-        font-size: 1.3em;
+        font-size: 2em;
         letter-spacing: 2px;
-        line-height: 27px;
+        line-height: 150%;
     }
+	
+	#credits #credit-persons  {
+		margin-top: 30%;
+	}
 </style>
 <div id="credits">
     <div id="background">
         <img src="assets/credits.jpg" width="100%" height="100%">
     </div>
-    <div class="col-md-4" style="margin-left:50px;">
+    <div class="col-md-1"></div>
+    <div class="col-md-7" style="margin-top: 7%;">
         <h2>Credits</h2>
         <ul style="list-style-type:square">
             <li>University of Amsterdam</li>
@@ -33,16 +46,22 @@
             <li>I Amsterdam</li>
         </ul>
     </div>
-    <div class="col-md-3">
-    </div>
-    <div class="col-md-3">
+    <div class="col-md-3" id="credit-persons">
         <h2 style="text-align:right;">Authors</h2>
         <ul style="list-style-type:none; text-align:right;">
             <li>Martine van den Berg</li>
-            <li>Jorick van Hees</li>
             <li>Hsu Young Ho</li>
             <li>Nathalie Jansen</li>
+            <li>Jorick van Hees</li>
             <li>Nikki Winands</li>
         </ul>
     </div>
 </div>
+
+<script>
+$(document).on('update', function(data) {
+	if(data.activeSlide == 9){
+		$('#next-button').addClass('animated fadeOutDown');
+	}
+});
+</script>
