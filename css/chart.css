@@ -2,6 +2,10 @@
 	max-height: auto !important;
 }
 
+#paper-acm-chart {
+	max-height: auto !important;
+}
+
 .c3-xgrid-focus {
 	display: none;
 }
