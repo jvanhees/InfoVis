@@ -59,8 +59,8 @@ function previousSlide(){
 }
 
 $(document).on('update', function(data){
-	console.log('slide:' + data.activeSlide);
-	console.log('state:' + data.activeState);
+	console.log('slide number:' + data.activeSlide);
+	console.log('state number:' + data.activeState);
 });
 
 function showSlide(slideNumber){
@@ -89,8 +89,8 @@ function showSlide(slideNumber){
 }
 
 function broadcast(){
-	console.log('active' + activeState);
-	console.log('total' + totalStates);
+	console.log('activeState' + activeState);
+	console.log('totalStates' + totalStates);
 	if(activeState == totalStates){
 		// Last state..
 		$('.next-button i').removeClass('mdi-navigation-expand-more').addClass('mdi-navigation-arrow-forward');

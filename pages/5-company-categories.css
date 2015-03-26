@@ -8,12 +8,70 @@
 }
 #charts {
     width: 50%;
-    float: left
+    float: left;
+}
+
+#charts:after{
+      content: "";
+      position: absolute;
+      bottom: 0%;
+      left: 50%;
+      background: #009587;
+      opacity: 0.5;
+      height: 100%;
+      width: 2px;
 }
 
 #text {
     width: 50%;
     float: right;
+}
+
+#conclusion1, conclusion2 {
+    position: absolute;
+}
+
+#conclusion1 p {
+    text-align: justify;
+    font-size: 1.4em;
+    font-family: 'sans-serif', serif;
+    padding: 25px 57px;
+}
+
+#conclusion1 h2 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 0;
+    text-decoration: underline;
+}
+
+#conclusion2 p {
+    text-align: justify;
+    font-size: 1.4em;
+    font-family: 'sans-serif', serif;
+    padding: 25px 57px;
+}
+
+#conclusion2 h2 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 0;
+    text-decoration: underline;
+}
+
+#conclusion2 {
+    display: none;
+}
+
+#source {
+    position: absolute;
+    bottom: 0%;
+    left: 70%;
+}
+
+#source p {
+    text-align:center;
+    font-family: 'sans-serif', serif;
 }
 
 #charts h2 {
@@ -60,20 +118,4 @@
     position: absolute;
     top: 96%;
     left: 1%;
-}
-
-#statement1 {
-/*
-    position: absolute;
-    top: 66%;
-    left: 23%;
-    width: 672px;
-*/
-}
-
-#statement1 p {
-/*
-    font-size: 1.3em;
-    text-align: justify;
-*/
 }

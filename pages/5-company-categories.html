@@ -2,6 +2,28 @@
 
 <link rel="stylesheet" href="pages/5-company-categories.css">
 
+<script>
+    $(document).on('update', function(data) {
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        if (data.activeSlide == 5){
+            $('#conclusion1').css('display','block');
+            if (data.activeState == 2){
+                $('#conclusion2').css('display','block');
+                $('#conclusion1').addClass('animated fadeOut');
+                $('#conclusion2').addClass('animated fadeIn');
+            }
+        } else if (data.activeSlide > 5 && data.activeSlide < 5) {
+                $('#conclusion2').css('display','none');
+                $('#conclusion1').css('display','block');
+                $('#conclusion1').one(animationEnd, function(){
+                    $(this).removeClass('animated fadeOut');
+                });   
+                
+            }
+    });
+    
+</script>
+
 <div id="wrapper">
     <div id="charts">
         <h2>Subcategories within ICT companies</h2>
@@ -23,42 +45,27 @@
     </div>
 
     <div id="text">
-        <div id="statement1" class="state">
-            <p>It’s not a new thing that creative types from around the world choose Amsterdam. The city is a vivid alternative to other major players, in a sense because it’s so different to its competitors. The combination of history, ingenuity and the smaller-scale of the city make it a breeding ground for creativity. As is often required in this industry, people work hard and for as long as it takes to hit a deadline. But in Amsterdam, the flipside is that you can return home by bike or unwind at a canal-side café – just two simple aspects that promote a healthier work-life balance.
+        <div id="conclusion1" class="state">
+            <h2>A genuine creative hub</h2>
+            <p><span style="color:#009587; text-decoration:underline;">Creative types</span> from around the world choose Amsterdam. The combination of history, ingenuity and the smaller-scale of the city make it a <span style="color:#009587; text-decoration:underline;">breeding ground for creativity</span>. As is often required in this industry, people work hard and for as long as it takes to hit a deadline. But in Amsterdam, the flipside is that you can return home by bike or unwind at a canal-side café – just two simple aspects that promote a healthier <span style="color:#009587; text-decoration:underline;">work-life balance</span>.
             </p>
+            <h2>Creative industries</h2>
+            <p>A number of the <span style="color:#009587; text-decoration:underline;">world's top</span> creative agencies were born or are based in Amsterdam and they’re driving <span style="color:#009587; text-decoration:underline;">award-winning</span> international campaigns for the biggest global brands. 
+            </p>
+        </div>
+        <div id="conclusion2" class="state">
+            <h2>Supporting creative enterprise</h2>
+            <p>New initiatives certainly benefit from the openness and opportunism of Amsterdam. Numerous new creative hubs have sprouted up in and around the city, notably transforming empty buildings or older industrial terrain into hotspots for media, design and art – attracting expanding brands and fresh talent in the process.
+            </p>
+            <h2>Start a company</h2>
+            <p>Starting a creative company in Amsterdam is easy. As well as local support from the Chamber of Commerce, amsterdam inbusiness, the Amsterdam Economic Board and other peer-driven business networks, initiatives like Hubstart specialise in easing digital, media and IT companies into the Amsterdam Area.
+            </p>
+        </div>
+        <div id="source">
+            <p><a href="http://www.iamsterdam.com/en/local/work/your-industry/creative">Source</a>: I Amsterdam - Working in creative industries.</p>
         </div>
     </div>
 </div>
 
-
-<!--
-<div>
-	<div style="height: 100%; width:30%; margin-left:10%" class="col-md-3 categories">
-		<h3>Amsterdam</h3>
-		<div class="category" id="categories-amsterdam" data-ref="catAms"></div>
-	</div>
-	<div style="height: 100%; width:20%;" class="col-md-3 categories">
-		<h3>London</h3>
-		<div class="category" id="categories-london" data-ref="catLondon"></div>
-	</div>
-	<div style="height: 100%; width:20%;" class="col-md-3 categories">
-		<h3>Los Angeles</h3>
-		<div class="category" id="categories-la" data-ref="catLA"></div>
-	</div>
-</div>
--->
-
-<!--
-<div id="statement1" class="state">
-    <p>It’s not a new thing that creative types from around the world choose Amsterdam. The city is a vivid alternative to other major players, in a sense because it’s so different to its competitors. The combination of history, ingenuity and the smaller-scale of the city make it a breeding ground for creativity. As is often required in this industry, people work hard and for as long as it takes to hit a deadline. But in Amsterdam, the flipside is that you can return home by bike or unwind at a canal-side café – just two simple aspects that promote a healthier work-life balance.
-    </p>
-</div>
--->
-
-<!--
-<div id="legend">
-    <img src="assets/legend.png" width="70%">
-</div>
--->
 <script type="text/javascript" src="data/categories.json"></script>
 <script type="text/javascript" src="js/company-types.js"></script>
