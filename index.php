@@ -9,15 +9,21 @@ if(isset($_GET['p']) && $_GET['p']){
 }
 
 $pages = array();
+$files = array();
 
 $dir = new DirectoryIterator('pages');
 foreach ($dir as $fileinfo) {
     if (!$fileinfo->isDot()) {
 		if($fileinfo->getExtension() == 'html'){
-			$pages[] = file_get_contents($fileinfo->getPath().'/'.$fileinfo->getFilename());
+            $files[] = $fileinfo->getPath().'/'.$fileinfo->getFilename();
 		}
     }
 }
+asort($files);
+foreach ($files as $file) {
+	$pages[] = file_get_contents($file);
+}
+
 ?>
 <!DOCTYPE html>
 <html>
